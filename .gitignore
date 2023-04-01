@@ -1,0 +1,10 @@
+Library/
+.vs/
+Logs/
+.idea/
+obj/
+UserSettings/
+.vsconfig
+Assembly-CSharp.csproj
+README.md
+TIMI_TTB.sln
