@@ -75,7 +75,11 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Test/bullet.prefab
   m_SortingOrder: 2
+=======
+  m_SortingOrder: 5
+>>>>>>> Stashed changes:Assets/Prefabs/bullet.prefab
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0.0754717, g: 0.055179782, b: 0.055179782, a: 1}
   m_FlipX: 0

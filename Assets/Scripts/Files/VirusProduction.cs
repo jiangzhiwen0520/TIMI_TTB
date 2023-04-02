@@ -9,7 +9,8 @@ public class VirusProduction : MonoBehaviour
     public int numsOfBullets;//发射数量
     public float frequency;//发射频率
     public Vector2 speed;
-    private bool m_canShoot=false;
+    //private bool m_canShoot=false;
+    private bool m_canShoot = true;
     private float m_times = 0;
     private bool m_canShoot2 = true;
     void Start()

@@ -56,7 +56,6 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\UploadGenerate.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Scripts\Items\Key.cs" />
@@ -69,9 +68,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\2D_Destruction\Demo\Demo Scripts\Reset.cs" />
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\geom\Circle.cs" />
-    <Compile Include="Assets\脚本\GetMouseUiChange.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
-    <Compile Include="Assets\Scripts\FoderManage.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\Items\Clock.cs" />
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\Delaunay\LR.cs" />
@@ -89,14 +86,15 @@
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\Delaunay\Edge.cs" />
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\Delaunay\HalfedgePriorityQueue.cs" />
     <Compile Include="Assets\Scripts\Files\ColliderClip.cs" />
+    <Compile Include="Assets\Scripts\DeleteFolder.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Items\TheWorld.cs" />
     <Compile Include="Assets\2D_Destruction\Scripts\Explodable.cs" />
-    <Compile Include="Assets\脚本\FolderMove.cs" />
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\utils\IDisposable.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\Scripts\FolderMove.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
@@ -107,7 +105,6 @@
     <Compile Include="Assets\2D_Destruction\Scripts\ClipperHelper.cs" />
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\geom\Winding.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
-    <Compile Include="Assets\脚本\KeyFolderTrigger.cs" />
     <Compile Include="Assets\2D_Destruction\Scripts\ExplodableAddon.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Files\fileMove.cs" />
@@ -119,6 +116,7 @@
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\Delaunay\EdgeList.cs" />
     <Compile Include="Assets\Scripts\Items\Item.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\Scripts\GetMouseUiChange.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Scripts\Items\ContainCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
@@ -127,10 +125,10 @@
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\Delaunay\Triangle.cs" />
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\geom\LineSegment.cs" />
     <Compile Include="Assets\Scripts\Items\UpContorller.cs" />
+    <Compile Include="Assets\Scripts\KeyFolderTrigger.cs" />
     <Compile Include="Assets\2D_Destruction\clipper_library\clipper.cs" />
     <Compile Include="Assets\Scripts\Items\FireWall.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
-    <Compile Include="Assets\脚本\DeleteFolder.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
