@@ -103,7 +103,7 @@ public class fileMove : MonoBehaviour
         float distanceToTarget = moveDirection.magnitude;
 
         // 如果距离小于可以接受的误差，则移动到下一个路径点
-        if (distanceToTarget < 0.01f)
+        if (distanceToTarget < 0.1f)
         {
             m_currentPathIndex++;
             if (m_currentPathIndex >= points.Count)
@@ -114,7 +114,7 @@ public class fileMove : MonoBehaviour
         else
         {
             // 向下一个路径点移动
-            moveVector = moveDirection.normalized * m_speed * Time.deltaTime;
+            Vector3 moveVector = moveDirection.normalized * m_speed * Time.deltaTime;
             transform.position += moveVector;
         }
     }

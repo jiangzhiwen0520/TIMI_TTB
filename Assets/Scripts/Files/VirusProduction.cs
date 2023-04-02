@@ -5,7 +5,7 @@ using UnityEngine;
 public class VirusProduction : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject bulletPrefab;//病毒子弹预制件
+    public GameObject[] bulletPrefab;//病毒子弹预制件
     public int numsOfBullets;//发射数量
     public float frequency;//发射频率
     public Vector2 speed;
@@ -14,7 +14,7 @@ public class VirusProduction : MonoBehaviour
     private bool m_canShoot2 = true;
     void Start()
     {
-
+        //m_times = frequency;
     }
 
     // Update is called once per frame
@@ -37,7 +37,7 @@ public class VirusProduction : MonoBehaviour
                         float randomAngle = Random.Range(-180, 180);
                         Transform bulletSpawnPoint = transform;
                         bulletSpawnPoint.Rotate(0, 0, randomAngle);
-                        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+                        GameObject bullet = Instantiate(bulletPrefab[Random.Range(0,bulletPrefab.Length)], bulletSpawnPoint.position, bulletSpawnPoint.rotation);
                         Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
                         bullet.GetComponent<BulletController>().SetMoveVector(bulletSpawnPoint.right * Random.Range(speed.x, speed.y));
                         bulletSpawnPoint.Rotate(0, 0, -randomAngle);
@@ -56,7 +56,7 @@ public class VirusProduction : MonoBehaviour
     public void SetCanShoot(bool b)
     {
         m_canShoot = b;
-        m_times = 0;
+        m_times = frequency;
     }
     public void SetCanShoot2(bool b)
     {

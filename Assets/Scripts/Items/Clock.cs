@@ -15,11 +15,11 @@ public class Clock: Item
 
     private void OnMouseOver()
     {
-        gameObject.GetComponent<TMPro.TextMeshPro>().SetText(GetStr());
+        //gameObject.GetComponent<TMPro.TextMeshPro>().SetText(GetStr());
     }
     private void OnMouseExit()
     {
-        gameObject.GetComponent<TMPro.TextMeshPro>().SetText("");
+        //gameObject.GetComponent<TMPro.TextMeshPro>().SetText("");
     }
     private void OnMouseDown()
     {
