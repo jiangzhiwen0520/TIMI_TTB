@@ -23,11 +23,14 @@ public class Clock: Item
     }
     private void OnMouseDown()
     {
-        GameObject g = GameObject.Find("Container");
-        ContainCounter counter = g.GetComponent<ItemController>().GetContainCounter();
-        counter.UseItems(gameObject);
-        //特效啥的
-        Func();
+        if (GameObject.FindWithTag("ShockDialog") == null)
+        {
+            GameObject g = GameObject.Find("Container");
+            ContainCounter counter = g.GetComponent<ItemController>().GetContainCounter();
+            counter.UseItems(gameObject);
+            //特效啥的
+            Func();
+        }
     }
     public override void Func()
     {

@@ -26,12 +26,15 @@ public class TheWorld : Item
     {
 
         //ÌØÐ§É¶µÄ
-        Func();
-        GameObject g = GameObject.Find("Container");
-        ContainCounter counter = g.GetComponent<ItemController>().GetContainCounter();
-        counter.UseItems(gameObject);
-        //g.GetComponent<ItemController>().ShowItems();
-        //Destroy(gameObject, 0.583f);
+        if (GameObject.FindWithTag("ShockDialog") == null)
+        {
+            Func();
+            GameObject g = GameObject.Find("Container");
+            ContainCounter counter = g.GetComponent<ItemController>().GetContainCounter();
+            counter.UseItems(gameObject);
+            //g.GetComponent<ItemController>().ShowItems();
+            //Destroy(gameObject, 0.583f);
+        }
     }
 
     public override void Func()

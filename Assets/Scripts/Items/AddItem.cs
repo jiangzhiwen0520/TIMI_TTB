@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class AddItem : MonoBehaviour
 {
@@ -20,17 +21,20 @@ public class AddItem : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        GameObject k = GameObject.Instantiate(itemPrefrb);
-        k.SetActive(false);
-        if (!m_ic.GetContainCounter().SetItems(k))
+        if (GameObject.FindWithTag("ShockDialog")==null)
         {
+            GameObject k = GameObject.Instantiate(itemPrefrb);
+            k.SetActive(false);
+            if (!m_ic.GetContainCounter().SetItems(k))
+            {
 
-            Destroy(k);
-        }
-        else
-        {
-            m_ic.ShowItems();
-            Destroy(gameObject);
+                Destroy(k);
+            }
+            else
+            {
+                m_ic.ShowItems();
+                Destroy(gameObject);
+            }
         }
     }
 }

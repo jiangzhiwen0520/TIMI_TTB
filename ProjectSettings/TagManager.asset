@@ -13,6 +13,7 @@ TagManager:
   - RemovableFiles
   - RVFiles
   - ShockDialog
+  - PauseDialog
   layers:
   - Default
   - TransparentFX

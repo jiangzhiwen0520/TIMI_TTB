@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     // Start is called before the first frame update
-    [Header("速度")]
+    //[Header("速度")]
     //public Vector2 speed;
     //private Vector3 m_dir;
     //private float m_speed;
@@ -67,6 +67,10 @@ public class BulletController : MonoBehaviour
     }
     private void OnMouseEnter()
     {
+        if (GameObject.FindGameObjectWithTag("PauseDialog") != null)
+        {
+            return;
+        }
         if (GameObject.FindGameObjectWithTag("ShockDialog") != null)
         {
             return;
