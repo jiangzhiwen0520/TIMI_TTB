@@ -31,6 +31,13 @@ public class Hammer:Item
 
     public override void Func()
     {
+        GetComponent<Animator>().SetTrigger("erase");
         //调用改变删除速度的接口，目前可能在点击处更好实现
+    }
+    public void MyDestroy()
+    {
+        GameObject g = GameObject.Find("Container");
+        g.GetComponent<ItemController>().SetFlash();
+        Destroy(gameObject);
     }
 }

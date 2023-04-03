@@ -24,6 +24,13 @@ public class Key : Item
 
     public override void Func()
     {
+        GetComponent<Animator>().SetTrigger("erase");
         //改变加密文件的logo，目前可能在点击处更好实现
+    }
+    public void MyDestroy()
+    {
+        GameObject g = GameObject.Find("Container");
+        g.GetComponent<ItemController>().SetFlash();
+        Destroy(gameObject);
     }
 }

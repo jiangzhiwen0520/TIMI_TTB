@@ -10,6 +10,9 @@ TagManager:
   - NormalFile
   - Bullet
   - JunkFile
+  - RemovableFiles
+  - RVFiles
+  - ShockDialog
   layers:
   - Default
   - TransparentFX

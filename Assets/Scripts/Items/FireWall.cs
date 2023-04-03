@@ -25,10 +25,20 @@ public class FireWall : Item
     public override void Func()
     {
         //设置无敌时间
+        GetComponent<Animator>().SetTrigger("erase");
         GameObject[] objects= GameObject.FindGameObjectsWithTag("Bullet");
         foreach (GameObject i in objects)
         {
             i.GetComponent<BulletController>().SetInvincible();
         }
+        GameObject cursor = GameObject.Find("鼠标");
+        cursor.GetComponent<CustomCursor>().Change();
+        
+    }
+    public void MyDestroy()
+    {
+        GameObject g = GameObject.Find("Container");
+        g.GetComponent<ItemController>().SetFlash();
+        Destroy(gameObject);
     }
 }

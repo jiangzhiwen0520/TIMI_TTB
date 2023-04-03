@@ -14,7 +14,7 @@ public class ContainCounter
     //存入物体，成功返回true；如果空间已满，返回false，
     public bool SetItems(GameObject item)
     {
-        if (m_items.Count<= m_capacity)
+        if (m_items.Count< m_capacity)
         {
             m_items.Add(item);
             return true;
@@ -59,7 +59,7 @@ public class ContainCounter
 
     public void UseItems(GameObject o)
     {
-        
+         
          m_items.Remove(o);
 
     }

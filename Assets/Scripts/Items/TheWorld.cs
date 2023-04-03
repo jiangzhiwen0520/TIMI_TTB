@@ -24,16 +24,19 @@ public class TheWorld : Item
 
     private void OnMouseDown()
     {
+
+        //特效啥的
+        Func();
         GameObject g = GameObject.Find("Container");
         ContainCounter counter = g.GetComponent<ItemController>().GetContainCounter();
         counter.UseItems(gameObject);
-        //特效啥的
-        Func();
-        g.GetComponent<ItemController>().ShowItems();
-        Destroy(gameObject);
+        //g.GetComponent<ItemController>().ShowItems();
+        //Destroy(gameObject, 0.583f);
     }
+
     public override void Func()
     {
+        GetComponent<Animator>().SetTrigger("erase");
         //所有文件和病毒子弹停止移动
         GameObject[] objects= GameObject.FindGameObjectsWithTag("Bullet"); 
         foreach(GameObject i in objects)
@@ -50,5 +53,11 @@ public class TheWorld : Item
         {
             i.GetComponent<fileMove>().SetStop();
         }
+    }
+    public void MyDestroy()
+    {
+        GameObject g = GameObject.Find("Container");
+        g.GetComponent<ItemController>().SetFlash();
+        Destroy(gameObject);
     }
 }

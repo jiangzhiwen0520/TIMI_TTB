@@ -28,14 +28,19 @@ public class Clock: Item
         counter.UseItems(gameObject);
         //特效啥的
         Func();
-        g.GetComponent<ItemController>().ShowItems();
-        Destroy(gameObject);
     }
     public override void Func()
     {
         Debug.Log("暂停上传");
+        GetComponent<Animator>().SetTrigger("erase");
         //调用暂停文件5秒上传函数，可以设置个信号
         //
         //
+    }
+    public void MyDestroy()
+    {
+        GameObject g = GameObject.Find("Container");
+        g.GetComponent<ItemController>().SetFlash();
+        Destroy(gameObject);
     }
 }

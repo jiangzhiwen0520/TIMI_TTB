@@ -11,6 +11,7 @@ public class ItemController : MonoBehaviour
     private int capacity=0;
     private int m_start = 0;
     private float m_w, m_h, m_x, m_y;//ÈÝÆ÷´óÐ¡
+    private bool m_flash=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,10 @@ public class ItemController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (m_flash)
+        {
+            ShowItems();
+        }
     }
 
     public void ShowItems()
@@ -30,9 +34,9 @@ public class ItemController : MonoBehaviour
         int first = m_start;
         //Debug.Log("m_start  "+first);
         //Debug.Log("items.Count  " + items.Count);
-        if (items.Count- first <= 5)
+        if (items.Count- first <= 6)
         {
-            first = items.Count-5;
+            first = items.Count-6;
             if (first < 0) first = 0;
             m_start = first;
         }
@@ -58,6 +62,7 @@ public class ItemController : MonoBehaviour
             else it.SetActive(false);
             i++;
         }
+        m_flash = false;
     }
     private void Init()
     {
@@ -82,5 +87,9 @@ public class ItemController : MonoBehaviour
             m_start++;
         }
         ShowItems();
+    }
+    public void SetFlash()
+    {
+        m_flash = true;
     }
 }
