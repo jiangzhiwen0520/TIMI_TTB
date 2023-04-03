@@ -96,6 +96,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\Scripts\FolderMove.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\Scripts\FileSystem\FileJump.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
@@ -137,6 +138,14 @@
     <Compile Include="Assets\2D_Destruction\Scripts\ExplodableFragments.cs" />
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\Delaunay\SiteList.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\Scripts\Jzw\DeleteFileTest.cs" />
+    <Compile Include="Assets\Scripts\Jzw\CustomCursor.cs" />
+    <Compile Include="Assets\Scripts\Jzw\MouseLoadingCircle.cs" />
+    <Compile Include="Assets\Scripts\Jzw\KeyFileMove.cs" />
+    <Compile Include="Assets\Scripts\Jzw\FileChoose.cs" />
+    <Compile Include="Assets\Scripts\BackGround\BackgroundScroller.cs" />
+    <Compile Include="Assets\Scripts\Jzw\JudgeFoderEmpty.cs" />
+    <Compile Include="Assets\Scripts\Jzw\FileSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
