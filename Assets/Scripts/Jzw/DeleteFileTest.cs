@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class DeleteFileTest : MonoBehaviour
 {
-    public float longPressTime = 2f; // 设定长按时间为 2 秒
+    public float longPressTime = 2f; // 设定长按时间为 2 秒 减去销毁动画的时长
 
     private bool isPressing = false;
     private float pressTimer = 0f;
+
+    public Animator animator;
 
     private void Update()
     {
@@ -41,10 +43,17 @@ public class DeleteFileTest : MonoBehaviour
             // 如果计时器达到长按时间，删除对象并重置计时器
             if (pressTimer >= longPressTime)
             {
-                Destroy(gameObject);
+
+                
+                animator.SetTrigger("destroy");
                 pressTimer = 0f;
                 isPressing = false;
             }
         }
+    }
+
+    public void DestoryFile()
+    {
+        Destroy(gameObject);
     }
 }

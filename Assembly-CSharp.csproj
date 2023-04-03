@@ -91,6 +91,7 @@
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\Delaunay\HalfedgePriorityQueue.cs" />
     <Compile Include="Assets\Scripts\Files\ColliderClip.cs" />
     <Compile Include="Assets\Scripts\DeleteFolder.cs" />
+    <Compile Include="Assets\Scripts\Jzw\ShowInfo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Items\TheWorld.cs" />
     <Compile Include="Assets\2D_Destruction\Scripts\Explodable.cs" />

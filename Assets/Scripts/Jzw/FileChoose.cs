@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 [RequireComponent(typeof(SpriteRenderer))]
 public class FileChoose : MonoBehaviour
 {
@@ -12,17 +11,27 @@ public class FileChoose : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    //[SerializeField] private ShowInfo showInfo;
+
+  
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalScale = transform.localScale;
+
+        
     }
+
+    
 
     private void Update()
     {
         if (isMouseOver)
         {
             transform.localScale = originalScale * hoverScaleFactor;
+
+
+           
         }
         else
         {
@@ -33,10 +42,14 @@ public class FileChoose : MonoBehaviour
     private void OnMouseEnter()
     {
         isMouseOver = true;
+
+         GameObject.Find("ЪѓБъ").GetComponent<ShowInfo>().ShowObjectInfo(gameObject.name);
     }
 
     private void OnMouseExit()
     {
         isMouseOver = false;
+
+        GameObject.Find("ЪѓБъ").GetComponent<ShowInfo>().ClearText();
     }
 }
