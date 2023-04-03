@@ -4,25 +4,48 @@ using UnityEngine;
 
 public class FileSystem : MonoBehaviour
 {
+    public GameObject fileSystem;
+    private string currentFolder;
+
+    private void Start()
+    {
+        currentFolder = "文件夹";
+       
+        
+    }
+
     private void Update()
     {
-        // 检测鼠标右键是否按下
-        if (Input.GetMouseButtonDown(1))
-        {
-            //Debug.Log("按下右键");
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            if (hitCollider != null && hitCollider.transform == transform)
+        // 检查鼠标左键是否按下
+        if (Input.GetMouseButtonUp(0))
+        {
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+
+            if (hit.collider != null)
             {
-                // 如果鼠标在矩形对象上，开始移动
-                //Debug.Log("右键重要文件");
-                
-                
+                // 检查击中的游戏对象的标签是否与预设的值相匹配
+                if (hit.collider.gameObject.CompareTag("Folder"))
+                {
+                    //Debug.Log("Clicked object with matching tag: " + hit.collider.gameObject.name);
+                    currentFolder = hit.collider.gameObject.transform.parent.parent.name;
+                    fileSystem.transform.Find(hit.collider.gameObject.name).gameObject.SetActive(true);
+                    hit.collider.gameObject.transform.parent.parent.gameObject.SetActive(false);
+
+
+                }
+                else if (hit.collider.gameObject.name=="返回键")
+                {
+                    fileSystem.transform.Find(currentFolder).gameObject.SetActive(true);
+                    hit.collider.gameObject.transform.parent.parent.gameObject.SetActive(false);
+                }
             }
+
         }
 
-        // 如果正在移动，更新对象位置为鼠标位置
        
     }
 
