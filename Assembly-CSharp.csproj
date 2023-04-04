@@ -152,6 +152,8 @@
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\Delaunay\SiteList.cs" />
     <Compile Include="Assets\Test.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\Scripts\virus3.cs" />
+    <Compile Include="Assets\Scripts\TimeAdd.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -34,7 +34,7 @@ public class MouseLoadingCircle : MonoBehaviour
             if (hit.collider != null)
             {
                 // 检查击中的游戏对象的标签是否与预设的值相匹配
-                if (hit.collider.gameObject.CompareTag("JunkFile"))
+                if (hit.collider.gameObject.CompareTag("JunkFile")|| hit.collider.gameObject.CompareTag("RVFiles"))
                 {
                     //Debug.Log("Clicked object with matching tag: " + hit.collider.gameObject.name);
                     isMouseDown = true;

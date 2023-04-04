@@ -22,6 +22,9 @@ public class fileMove : MonoBehaviour
     private bool m_isStop = false;
     private float m_time = 5;
     private Vector3 moveVector;
+
+    private float distanceToTarget;
+    private Vector2 moveDirection;
     //private GameObject[] objects;
     private AnimationCurve Curve
     {
@@ -37,7 +40,11 @@ public class fileMove : MonoBehaviour
     }
     void Start()
     {
-        transform.position= points[0];
+        if (points.Count > 0)
+        {
+            transform.position = points[0];
+        }
+        
         m_currentPathIndex++;
         m_speed = speed;
         m_isStop = false;
@@ -96,11 +103,18 @@ public class fileMove : MonoBehaviour
             m_speed = v*speed;
             //Debug.Log("m_speed:"+m_speed);
         }
-        Vector2 currentTarget = points[m_currentPathIndex];
 
-        // 计算移动方向和距离
-        Vector2 moveDirection = currentTarget - (Vector2)transform.position;
-        float distanceToTarget = moveDirection.magnitude;
+        if ( points.Count>0)
+        {
+            Vector2 currentTarget = points[m_currentPathIndex];
+
+            // 计算移动方向和距离
+            moveDirection = currentTarget - (Vector2)transform.position;
+            distanceToTarget = moveDirection.magnitude;
+        }
+        
+
+        
 
         // 如果距离小于可以接受的误差，则移动到下一个路径点
         if (distanceToTarget < 0.1f)

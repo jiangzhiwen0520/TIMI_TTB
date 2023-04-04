@@ -50,6 +50,22 @@ public class DeleteFileTest : MonoBehaviour
                 isPressing = false;
             }
         }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            GameObject a = GameObject.Find("Container").GetComponent<ItemController>().GetContainCounter().UseItems(1);
+            if (a == null)
+            {
+                return;
+            }
+            else
+            {
+                a.GetComponent<Hammer>().Func();
+                animator.SetTrigger("destroy");
+                
+                //Destroy(gameObject,1);
+            }
+        }
     }
 
     public void DestoryFile()
