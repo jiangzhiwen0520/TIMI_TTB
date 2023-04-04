@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DeleteFileTest : MonoBehaviour
 {
-    public float longPressTime = 2f; // 设定长按时间为 2 秒 减去销毁动画的时长
+    public float longPressTime ; // 设定长按时间为 2 秒 减去销毁动画的时长
 
     private bool isPressing = false;
     private float pressTimer = 0f;

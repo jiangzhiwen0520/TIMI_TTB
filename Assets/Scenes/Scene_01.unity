@@ -7637,9 +7637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorTexture:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2800000, guid: f35e769e4090d5e459d24fefbc345cad, type: 3}
   hotSpot: {x: 0, y: 0}
 --- !u!4 &1528812829
 Transform:
@@ -8253,9 +8251,9 @@ GameObject:
   - component: {fileID: 1601152615}
   - component: {fileID: 1601152614}
   - component: {fileID: 1601152613}
+  - component: {fileID: 1601152619}
   - component: {fileID: 1601152618}
   - component: {fileID: 1601152616}
-  - component: {fileID: 1601152619}
   m_Layer: 0
   m_Name: NormalJunk_Small
   m_TagString: JunkFile
@@ -8376,7 +8374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b07294429f2f134e9045b032fdc9c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longPressTime: 2
+  longPressTime: 1
   animator: {fileID: 1601152613}
 --- !u!61 &1601152619
 BoxCollider2D:
