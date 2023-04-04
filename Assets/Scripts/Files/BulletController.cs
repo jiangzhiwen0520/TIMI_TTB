@@ -23,7 +23,13 @@ public class BulletController : MonoBehaviour
         //m_speed = Random.Range(speed.x, speed.y);
         //Debug.Log(m_speed);
     }
-
+    private void OnEnable()
+    {
+        if (m_moveVector!=null)
+        {
+            GetComponent<Rigidbody2D>().velocity = m_moveVector;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
