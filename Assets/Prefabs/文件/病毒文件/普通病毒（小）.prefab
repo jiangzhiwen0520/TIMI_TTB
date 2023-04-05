@@ -181,8 +181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab:
   - {fileID: 3618597557704241672, guid: 2f09dad9e48b3ab49be592b772e60909, type: 3}
-  numsOfBullets: 3
-  frequency: 2
+  numsOfBullets: 1
+  frequency: 3
   speed: {x: 0.2, y: 1}
 --- !u!114 &4793519302829716675
 MonoBehaviour:

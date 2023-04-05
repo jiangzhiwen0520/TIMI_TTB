@@ -7,6 +7,7 @@ using TMPro;
 public class SpaceCaculate : MonoBehaviour
 {  
     private int fileSpace=0;
+    public GameObject defeatWindow;
 
     public TextMeshProUGUI countText;
     // Start is called before the first frame update
@@ -27,6 +28,10 @@ public class SpaceCaculate : MonoBehaviour
             }
         }
 
+        for(int i = 0; i < pos.Count; i++)
+        {
+            Debug.Log(pos[i].transform.parent.parent);
+        }
         //Debug.Log("jj"+pos.Count);
         for (int i = 0; i < pos.Count; i++)
         {
@@ -36,46 +41,47 @@ public class SpaceCaculate : MonoBehaviour
                 {
                     fileSpace+=1;
                 }
-            }
-            else if (pos[i].transform.childCount > 0)
-            {
-                if (pos[i].transform.GetChild(0).name.Contains("中"))
+                else if (pos[i].transform.GetChild(0).name.Contains("中"))
                 {
                     fileSpace += 2;
                 }
-            }
-            else if (pos[i].transform.childCount > 0)
-            {
-                if (pos[i].transform.GetChild(0).name.Contains("大"))
+                else if (pos[i].transform.GetChild(0).name.Contains("大"))
                 {
                     fileSpace += 4;
                 }
-            }
-            else if (pos[i].transform.childCount > 0)
-            {
-                if (pos[i].transform.GetChild(0).name == "普通文件")
+                else if (pos[i].transform.GetChild(0).name == "普通文件")
                 {
                     fileSpace += 1;
                 }
             }
+           
 
         }
-        Debug.Log(fileSpace);
+
+        //Debug.Log(fileSpace);
         //CaculateSpace();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(fileSpace);
-        GameObject.Find("存储条").GetComponent<Image>().fillAmount = fileSpace / 50f;
-        if (fileSpace < 10)
+        //Debug.Log(fileSpace);
+        if (fileSpace <= 50)
         {
-            countText.text = "0" + fileSpace + "/50";
+            GameObject.Find("存储条").GetComponent<Image>().fillAmount = fileSpace / 50f;
+            if (fileSpace < 10)
+            {
+                countText.text = "0" + fileSpace + "/50";
+            }
+            else
+            {
+                countText.text = fileSpace + "/50";
+            }
         }
         else
         {
-            countText.text = fileSpace + "/50";
+            defeatWindow.SetActive(true);
+            Time.timeScale = 0;
         }
        // Debug.Log(fileNum);
 
@@ -89,12 +95,13 @@ public class SpaceCaculate : MonoBehaviour
         foreach (GameObject obj in allGameObjects)
         {
             if (obj.CompareTag("Position") || obj.CompareTag("DPosition"))
-            {
-
+            {             
                 pos.Add(obj);
             }
         }
 
+        
+        Debug.Log(pos.Count);
         for (int i = 0; i < pos.Count; i++)
         {
             if (pos[i].transform.childCount > 0)
@@ -103,32 +110,25 @@ public class SpaceCaculate : MonoBehaviour
                 {
                     fileSpace += 1;
                 }
-            }
-            else if (pos[i].transform.childCount > 0)
-            {
-                if (pos[i].transform.GetChild(0).name.Contains("中"))
+                else if (pos[i].transform.GetChild(0).name.Contains("中"))
                 {
                     fileSpace += 2;
                 }
-            }
-            else if (pos[i].transform.childCount > 0)
-            {
-                if (pos[i].transform.GetChild(0).name.Contains("大"))
+                else if (pos[i].transform.GetChild(0).name.Contains("大"))
                 {
                     fileSpace += 4;
                 }
-            }
-            else if (pos[i].transform.childCount > 0)
-            {
-                if (pos[i].transform.GetChild(0).name.Contains( "普通文件"))
+                else if (pos[i].transform.GetChild(0).name == "普通文件")
                 {
                     fileSpace += 1;
                 }
             }
+
+
         }
 
         //List<GameObject> dpos = new List<GameObject>();
-        
+
         //foreach (GameObject obj in allGameObjects)
         //{
         //    if (obj.CompareTag("DPosition") && obj.transform.GetChild(0).tag != "Folder")
