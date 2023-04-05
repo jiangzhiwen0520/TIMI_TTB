@@ -25,9 +25,9 @@ public class FileSystem : MonoBehaviour
     private void Update()
     {
         if (GameObject.FindGameObjectWithTag("PauseDialog") != null|| GameObject.FindWithTag("ShockDialog") != null)
-            {
-                return;
-            }
+        {
+            return;
+        }
 
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
