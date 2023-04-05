@@ -7,7 +7,7 @@ public class FileChoose : MonoBehaviour
 {
     public float hoverScaleFactor = 1.2f; // 悬停时的缩放因子
     private Vector3 originalScale; // 原始缩放值
-    private bool isMouseOver = false; // 标记鼠标是否在对象上
+    public bool isMouseOver = false; // 标记鼠标是否在对象上
 
     private SpriteRenderer spriteRenderer;
 

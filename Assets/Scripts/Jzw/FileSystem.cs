@@ -51,6 +51,8 @@ public class FileSystem : MonoBehaviour
                     fileMap.transform.Find(hit.collider.gameObject.name).gameObject.GetComponent<SpriteRenderer>().sprite = fileIcon;
                     fileMap.transform.Find(fileTrace[fileTrace.Count - 2].ToString()).gameObject.GetComponent<SpriteRenderer>().sprite = point;
 
+                    hit.collider.gameObject.GetComponent<FileChoose>().isMouseOver = false ;
+
                 }
                 else if (hit.collider.gameObject.name == "·µ»Ø¼ü")
                 {
@@ -59,13 +61,13 @@ public class FileSystem : MonoBehaviour
                     //hit.collider.gameobject.transform.parent.parent.gameobject.setactive(false);
                     if (fileTrace.Count > 1)
                     {
-                        Debug.Log(fileTrace.Count);
+                        //Debug.Log(fileTrace.Count);
                         fileSystem.transform.Find(fileTrace[fileTrace.Count - 1].ToString()).gameObject.SetActive(false);
                         fileMap.transform.Find(fileTrace[fileTrace.Count - 1].ToString()).gameObject.GetComponent<SpriteRenderer>().sprite = point;
 
                         fileTrace.RemoveAt(fileTrace.Count - 1);
 
-                        Debug.Log(fileTrace.Count);
+                        //Debug.Log(fileTrace.Count);
                         fileSystem.transform.Find(fileTrace[fileTrace.Count - 1].ToString()).gameObject.SetActive(true);
                         fileMap.transform.Find(fileTrace[fileTrace.Count - 1].ToString()).gameObject.GetComponent<SpriteRenderer>().sprite = fileIcon;
 

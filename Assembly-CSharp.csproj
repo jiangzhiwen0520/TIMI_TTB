@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Jzw\DeleteFileTest.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\Scripts\virus3.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\Delaunay\EdgeReorderer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\Delaunay\HalfedgePriorityQueue.cs" />
     <Compile Include="Assets\Scripts\Files\ColliderClip.cs" />
     <Compile Include="Assets\Scripts\DeleteFolder.cs" />
+    <Compile Include="Assets\Scripts\TimeAdd.cs" />
     <Compile Include="Assets\Scripts\Jzw\ShowInfo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Items\TheWorld.cs" />
@@ -152,8 +154,10 @@
     <Compile Include="Assets\2D_Destruction\Unity-delaunay\Delaunay\SiteList.cs" />
     <Compile Include="Assets\Test.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\Scripts\virus3.cs" />
-    <Compile Include="Assets\Scripts\TimeAdd.cs" />
+    <Compile Include="Assets\Scripts\Jzw\KeyfileBorder.cs" />
+    <Compile Include="Assets\Scripts\AddSpace.cs" />
+    <Compile Include="Assets\Scripts\Jzw\UploadFile.cs" />
+    <Compile Include="Assets\Scripts\Jzw\SpaceCaculate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

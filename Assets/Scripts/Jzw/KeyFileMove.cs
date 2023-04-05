@@ -5,7 +5,10 @@ using UnityEngine;
 public class KeyFileMove : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
-    private bool isMoving = false;
+    public bool isMoving = false;
+
+    public Rect bounds; // 区域限制，可以在Unity编辑器中设置
+    public Camera mainCamera; // 主摄像机，需要在Unity编辑器中指定
 
     private void Start()
     {
@@ -25,14 +28,20 @@ public class KeyFileMove : MonoBehaviour
             {
                 // 如果鼠标在矩形对象上，开始移动
                 //Debug.Log("右键重要文件");
-                isMoving = !isMoving;
+                isMoving = true;
+                transform.SetParent(GameObject.Find("文件系统").transform);
+                gameObject.GetComponent<FileChoose>().enabled = false;
             }
         }
 
         // 如果正在移动，更新对象位置为鼠标位置
         if (isMoving)
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);       
+
+            mousePosition.x = Mathf.Clamp(mousePosition.x, bounds.xMin, bounds.xMax);
+            mousePosition.y = Mathf.Clamp(mousePosition.y, bounds.yMin, bounds.yMax);
+
             transform.position = new Vector3(mousePosition.x, mousePosition.y, transform.position.z);
         }
     }

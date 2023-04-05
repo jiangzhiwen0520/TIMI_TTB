@@ -12,6 +12,7 @@ public class ShowInfo : MonoBehaviour
     void Start()
     {
         textMeshPro.text = "";
+        //Debug.Log(GameObject.Find("ÎÄ¼þ¼Ð´°¿Ú").GetComponent<Renderer>().bounds);
         
     }
 
