@@ -30,7 +30,8 @@ public class DialogContonller : MonoBehaviour
         UiTimeBar uibar = o.GetComponent<UiTimeBar>();
         if (!uibar.GetStart())
         {
-            Debug.Log("删除成功");
+            GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(0);
+            //Debug.Log("删除成功");
             Destroy(o);
         }
     }

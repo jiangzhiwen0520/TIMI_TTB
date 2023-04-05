@@ -6,6 +6,7 @@ public class Pause : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject pauseDialog;
+    public Sprite[] sprites;
     void Start()
     {
         
@@ -16,7 +17,7 @@ public class Pause : MonoBehaviour
     {
         
     }
-    private void OnMouseEnter()
+    /*private void OnMouseEnter()
     {
         Vector3 a = new Vector3(0, 0.1f, 0);
         transform.position += a;
@@ -25,13 +26,27 @@ public class Pause : MonoBehaviour
     {
         Vector3 a = new Vector3(0, 0.1f, 0);
         transform.position -= a;
-    }
+    }*/
     private void OnMouseDown()
     {
+        if (GameObject.FindGameObjectWithTag("PauseDialog") != null)
+        {
+            return;
+        }
+        GameObject.Find("–ßπ˚“Ù–ß").GetComponent<AudioContonller>().SetAudio(0);
+        GetComponent<SpriteRenderer>().sprite = sprites[1];
         Time.timeScale = 0;
         if (GameObject.FindWithTag("PauseDialog")==null)
         {
             Instantiate(pauseDialog);
+        }
+    }
+    private void OnMouseUp()
+    {
+        GetComponent<SpriteRenderer>().sprite = sprites[0];
+        if (GameObject.FindGameObjectWithTag("PauseDialog") != null)
+        {
+            return;
         }
     }
 }

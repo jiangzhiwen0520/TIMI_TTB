@@ -14,6 +14,10 @@ public class DeleteFileTest : MonoBehaviour
 
     private void Update()
     {
+        if (GameObject.FindGameObjectWithTag("PauseDialog") != null || GameObject.FindWithTag("ShockDialog") != null)
+        {
+            return;
+        }
         // 检测鼠标左键是否按下
         if (Input.GetMouseButtonDown(0))
         {
@@ -43,14 +47,22 @@ public class DeleteFileTest : MonoBehaviour
             // 如果计时器达到长按时间，删除对象并重置计时器
             if (pressTimer >= longPressTime)
             {
-
-                
+                GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(2);
                 animator.SetTrigger("destroy");
                 pressTimer = 0f;
                 isPressing = false;
             }
         }
 
+        
+    }
+
+    public void DestoryFile()
+    {
+        Destroy(gameObject);
+    }
+    private void OnMouseOver()
+    {
         if (Input.GetMouseButtonUp(1))
         {
             GameObject a = GameObject.Find("Container").GetComponent<ItemController>().GetContainCounter().UseItems(1);
@@ -60,16 +72,12 @@ public class DeleteFileTest : MonoBehaviour
             }
             else
             {
+                GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(2);
                 a.GetComponent<Hammer>().Func();
                 animator.SetTrigger("destroy");
-                
+
                 //Destroy(gameObject,1);
             }
         }
-    }
-
-    public void DestoryFile()
-    {
-        Destroy(gameObject);
     }
 }

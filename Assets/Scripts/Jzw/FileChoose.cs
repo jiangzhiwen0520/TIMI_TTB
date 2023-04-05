@@ -44,6 +44,10 @@ public class FileChoose : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (GameObject.FindGameObjectWithTag("PauseDialog") != null || GameObject.FindWithTag("ShockDialog") != null)
+        {
+            return;
+        }
         isMouseOver = true;
 
          GameObject.Find("ЪѓБъ").GetComponent<ShowInfo>().ShowObjectInfo(gameObject.name);
@@ -51,6 +55,10 @@ public class FileChoose : MonoBehaviour
 
     private void OnMouseExit()
     {
+        if (GameObject.FindGameObjectWithTag("PauseDialog") != null || GameObject.FindWithTag("ShockDialog") != null)
+        {
+            return;
+        }
         isMouseOver = false;
 
         GameObject.Find("ЪѓБъ").GetComponent<ShowInfo>().ClearText();

@@ -24,8 +24,10 @@ public class TheWorld : Item
 
     private void OnMouseDown()
     {
-
-        //ÌØÐ§É¶µÄ
+        if (GameObject.FindGameObjectWithTag("PauseDialog") != null)
+        {
+            return;
+        }
         if (GameObject.FindWithTag("ShockDialog") == null)
         {
             Func();

@@ -82,24 +82,25 @@ public class BulletController : MonoBehaviour
             return;
         }
         if (!m_isInvincible) {
-        GameObject g = GameObject.Find("Container");
-        ContainCounter counter = g.GetComponent<ItemController>().GetContainCounter();
-        GameObject item = counter.UseItems(2);//是否有防火墙
-                                                //触发弹窗的接口
-        if (item != null)
-        {
-            item.GetComponent<FireWall>().Func();
-            Debug.Log("无敌时间");
-            //Destroy(item, 0.1f);
-            //g.GetComponent<ItemController>().ShowItems();
-        }
-        else
-        {
-            //Debug.Log("触发弹窗");
-            Instantiate(dialog);
-            //dialog.GetComponent<UiTimeBar>().SetStart();
-            //触发弹窗的接口;
-        }
+            GameObject g = GameObject.Find("Container");
+            ContainCounter counter = g.GetComponent<ItemController>().GetContainCounter();
+            GameObject item = counter.UseItems(2);//是否有防火墙
+                                                    //触发弹窗的接口
+            if (item != null)
+            {
+                item.GetComponent<FireWall>().Func();
+                Debug.Log("无敌时间");
+                //Destroy(item, 0.1f);
+                //g.GetComponent<ItemController>().ShowItems();
+            }
+            else
+            {
+                    //Debug.Log("触发弹窗");
+                GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(5);
+                Instantiate(dialog);
+                //dialog.GetComponent<UiTimeBar>().SetStart();
+                //触发弹窗的接口;
+            }
         }
     }
     public void SetStop()

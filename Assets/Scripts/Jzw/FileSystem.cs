@@ -24,6 +24,11 @@ public class FileSystem : MonoBehaviour
 
     private void Update()
     {
+        if (GameObject.FindGameObjectWithTag("PauseDialog") != null|| GameObject.FindWithTag("ShockDialog") != null)
+            {
+                return;
+            }
+
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         // 检查鼠标左键是否抬起
@@ -38,6 +43,8 @@ public class FileSystem : MonoBehaviour
                 // 检查击中的游戏对象的标签是否与预设的值相匹配
                 if (hit.collider.gameObject.CompareTag("Folder"))
                 {
+                    //点击文件夹音效
+                    GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(3);
                     //Debug.Log("Clicked object with matching tag: " + hit.collider.gameObject.name);
                     //currentFolder = hit.collider.gameObject.transform.parent.parent.name;
                     //Debug.Log(currentFolder);
@@ -56,6 +63,7 @@ public class FileSystem : MonoBehaviour
                 }
                 else if (hit.collider.gameObject.name == "返回键")
                 {
+                    GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(0);
                     //debug.log("按下返回键");
                     //filesystem.transform.find(currentfolder).gameobject.setactive(true);
                     //hit.collider.gameobject.transform.parent.parent.gameobject.setactive(false);

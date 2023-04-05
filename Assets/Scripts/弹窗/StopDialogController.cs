@@ -11,7 +11,7 @@ public class StopDialogController : MonoBehaviour
         Vector3 a = new Vector3(0, 10, 0);
         transform.position += a;
 
-        Debug.Log("MouseEnter");
+        //Debug.Log("MouseEnter");
 
     }
 
@@ -19,7 +19,7 @@ public class StopDialogController : MonoBehaviour
     {
         Vector3 a = new Vector3(0, 10, 0);
         transform.position -= a;
-        Debug.Log("MouseExit");
+        //Debug.Log("MouseExit");
 
     }
 
@@ -28,7 +28,7 @@ public class StopDialogController : MonoBehaviour
 
         transform.localScale = 0.8f * Vector3.one;
 
-        Debug.Log("MouseDown");
+        //Debug.Log("MouseDown");
 
     }
 
@@ -37,15 +37,15 @@ public class StopDialogController : MonoBehaviour
 
         transform.localScale = Vector3.one;
 
-        Debug.Log("MouseUp");
+        //Debug.Log("MouseUp");
 
     }
 
     public void MouseClick()
     {
-
+        GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(0);
         GameObject g = GameObject.FindWithTag("PauseDialog");
-        Debug.Log("MouseClick");
+        //Debug.Log("MouseClick");
         Time.timeScale = 1;
         Destroy(g);
 
@@ -53,9 +53,9 @@ public class StopDialogController : MonoBehaviour
     public void MouseClickQ()
     {
 
-
-    #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;//如果是在unity编译器中
+        //GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(0);
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;//如果是在unity编译器中
     #else
             Application.Quit();//否则在打包文件中
     #endif

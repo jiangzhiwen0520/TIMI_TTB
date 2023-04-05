@@ -21,6 +21,7 @@ public class AddItem : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        if (GameObject.FindGameObjectWithTag("PauseDialog") != null) return;
         if (GameObject.FindWithTag("ShockDialog")==null)
         {
             GameObject k = GameObject.Instantiate(itemPrefrb);

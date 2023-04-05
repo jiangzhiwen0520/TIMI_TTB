@@ -17,9 +17,9 @@ public class DialogController : MonoBehaviour
    
     public void MouseClick()
     {
-
+        GameObject.Find("–ßπ˚“Ù–ß").GetComponent<AudioContonller>().SetAudio(0);
         GameObject g = GameObject.FindWithTag("Dialog");
-        Debug.Log("MouseClick");
+        //Debug.Log("MouseClick");
         Time.timeScale = 1;
         Destroy(g);
 
