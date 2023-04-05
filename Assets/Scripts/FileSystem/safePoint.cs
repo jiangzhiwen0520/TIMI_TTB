@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class safePoint : MonoBehaviour
 {
-    [Header("结算场景")]
-    string newScene;
+    [Header("结算界面")]
+    public GameObject next;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,8 @@ public class safePoint : MonoBehaviour
         {
             string filePath = Application.dataPath + "/task.csv";
             WriteCsv(filePath);//写入本地
-            SceneManager.LoadScene(newScene);
+            next.SetActive(true);
+            Time.timeScale = 0;
         }
     }
     public void WriteCsv( string path)
@@ -38,7 +39,7 @@ public class safePoint : MonoBehaviour
         FileStream fs = File.Open(path, FileMode.Open, FileAccess.Write);
         Scene scene = SceneManager.GetActiveScene();
         string str= scene.name;
-        Debug.Log(scene.name);
+        //Debug.Log(scene.name);
         byte[] info = new UTF8Encoding(true).GetBytes(str);
         //添加数据到文件中
         fs.Flush();
