@@ -10,7 +10,7 @@ public class fileMove : MonoBehaviour
     public float slowDown;
     [Space(20)]
     [SerializeField] private AnimationCurve[] m_Curves;
-    [Tooltip("ÇúÏßÁÐ±íÄ¬ÈÏË÷Òý")]
+    [Tooltip("ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
     [SerializeField] int AnimationCurveIndex = 0;
     [Space(20)]
     //private Vector2 m_curPos;
@@ -42,7 +42,9 @@ public class fileMove : MonoBehaviour
     {
         if (points.Count > 0)
         {
-            //transform.localPosition = points[0];
+
+            //transform.position = points[0];
+
         }
         
         m_currentPathIndex++;
@@ -112,7 +114,7 @@ public class fileMove : MonoBehaviour
         {
             Vector2 currentTarget = points[m_currentPathIndex];
 
-            // ¼ÆËãÒÆ¶¯·½ÏòºÍ¾àÀë
+            // ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½Í¾ï¿½ï¿½ï¿½
             moveDirection = currentTarget - (Vector2)transform.localPosition;
             distanceToTarget = moveDirection.magnitude;
         }
@@ -120,7 +122,7 @@ public class fileMove : MonoBehaviour
 
         
 
-        // Èç¹û¾àÀëÐ¡ÓÚ¿ÉÒÔ½ÓÊÜµÄÎó²î£¬ÔòÒÆ¶¯µ½ÏÂÒ»¸öÂ·¾¶µã
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½Ú¿ï¿½ï¿½Ô½ï¿½ï¿½Üµï¿½ï¿½ï¿½î£¬ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½
         if (distanceToTarget < 0.1f)
         {
             m_currentPathIndex++;
@@ -131,7 +133,7 @@ public class fileMove : MonoBehaviour
         }
         else
         {
-            // ÏòÏÂÒ»¸öÂ·¾¶µãÒÆ¶¯
+            // ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½
             Vector3 moveVector = moveDirection.normalized * m_speed * Time.deltaTime;
             transform.localPosition += moveVector;
         }
