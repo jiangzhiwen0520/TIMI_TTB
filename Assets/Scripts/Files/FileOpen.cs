@@ -24,7 +24,7 @@ public class FileOpen : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1) && m_num > 0)
         {
-            Debug.Log("ср╩В");
+            //Debug.Log("ср╩В");
             GameObject a = GameObject.Find("Container").GetComponent<ItemController>().GetContainCounter().UseItems(0);
             if (a != null)
             {

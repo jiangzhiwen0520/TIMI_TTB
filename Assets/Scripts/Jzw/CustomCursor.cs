@@ -14,6 +14,7 @@ public class CustomCursor : MonoBehaviour
     {
         // 设置自定义鼠标纹理
         Cursor.SetCursor(cursorTexture[0], hotSpot, CursorMode.Auto);
+        
     }
     public void Change()
     {

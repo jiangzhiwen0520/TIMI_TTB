@@ -20,7 +20,7 @@ public class NextPanel : MonoBehaviour
             string s = nextLevelScene.Substring(0, nextLevelScene.Length - 1);
             string l= nextLevelScene.Substring(nextLevelScene.Length - 1,1);
             nextLevelScene = s + (Convert.ToInt32(l)+1);
-            if (nextLevelScene.Equals("Scene_04"))
+            if (nextLevelScene.Equals("Scene_05"))
             {
                 return;
             }

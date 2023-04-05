@@ -30,7 +30,7 @@ public class SpaceCaculate : MonoBehaviour
 
         for(int i = 0; i < pos.Count; i++)
         {
-            Debug.Log(pos[i].transform.parent.parent);
+            //Debug.Log(pos[i].transform.parent.parent);
         }
         //Debug.Log("jj"+pos.Count);
         for (int i = 0; i < pos.Count; i++)

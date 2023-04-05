@@ -22,7 +22,12 @@ public class DialogController : MonoBehaviour
         {
             transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = ms[i];
             transform.GetChild(2).GetComponent<Image>().sprite = imgs[i];
-            yield return new WaitForSecondsRealtime(times[i]);
+            if(times.Length>0)
+                yield return new WaitForSecondsRealtime(times[i]);
+            else
+                yield return new WaitForSecondsRealtime(1);
+
+
             if (i == ms.Length - 1)
                 i = -1;
         }

@@ -15,6 +15,7 @@ public class RestartPanel : MonoBehaviour
         btn_Restart.onClick.AddListener(() =>
         {
             restartScene= SceneManager.GetActiveScene().name;
+            Time.timeScale = 1;
             SceneManager.LoadScene(restartScene);
         });
         btn_quit.onClick.AddListener(() =>

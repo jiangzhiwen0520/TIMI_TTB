@@ -13,6 +13,7 @@ public class FileSystem : MonoBehaviour
     public Sprite fileIcon;
     private void Start()
     {
+        Time.timeScale = 1;
         //currentFolder = "文件夹1.1";
         fileTrace.Add("文件夹1.1");
         //Debug.Log(fileTrace.Count);
@@ -55,6 +56,7 @@ public class FileSystem : MonoBehaviour
                     //Debug.Log(fileTrace.Count);
 
                     //小地图部分
+                    //Debug.Log(fileMap.transform.Find(hit.collider.gameObject.name) == null);
                     fileMap.transform.Find(hit.collider.gameObject.name).gameObject.GetComponent<SpriteRenderer>().sprite = fileIcon;
                     fileMap.transform.Find(fileTrace[fileTrace.Count - 2].ToString()).gameObject.GetComponent<SpriteRenderer>().sprite = point;
 

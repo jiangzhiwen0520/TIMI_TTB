@@ -43,7 +43,9 @@ public class UploadFile : MonoBehaviour
 
     private void Start()
     {
-        GameObject.Find("重要文件").transform.parent.tag = "KeyPosition";
+        //Debug.Log(GameObject.Find("重要文件").transform.parent.name);
+        
+        
         //GameObject[] pos = GameObject.FindGameObjectsWithTag("Position");
 
         List<GameObject> pos = new List<GameObject>();
@@ -147,7 +149,7 @@ public class UploadFile : MonoBehaviour
                          instance.transform.SetParent(fillpos.transform, false);
                     }
                    
-                    Debug.Log(instance.transform.parent.name);
+                    //Debug.Log(instance.transform.parent.name);
                 }
                 else
                 {
@@ -159,7 +161,7 @@ public class UploadFile : MonoBehaviour
                     {
                         instance.transform.SetParent(fillpos.transform, false);
                     }
-                    Debug.Log(instance.transform.parent.name);
+                    //Debug.Log(instance.transform.parent.name);
                 }
                 
 
@@ -176,7 +178,7 @@ public class UploadFile : MonoBehaviour
                     {
                         instance.transform.SetParent(fillpos.transform, false);
                     }
-                    Debug.Log(instance.transform.parent.name);
+                    //Debug.Log(instance.transform.parent.name);
                 }
                 else
                 {
@@ -188,7 +190,7 @@ public class UploadFile : MonoBehaviour
                     {
                         instance.transform.SetParent(fillpos.transform, false);
                     }
-                    Debug.Log(instance.transform.parent.name);
+                    //Debug.Log(instance.transform.parent.name);
                 }
             }
             else if (template[tempNum][i] == "大病毒")
@@ -203,7 +205,7 @@ public class UploadFile : MonoBehaviour
                     {
                         instance.transform.SetParent(fillpos.transform, false);
                     }
-                    Debug.Log(instance.transform.parent.name);
+                    //Debug.Log(instance.transform.parent.name);
                 }
                 else
                 {
@@ -215,7 +217,7 @@ public class UploadFile : MonoBehaviour
                     {
                         instance.transform.SetParent(fillpos.transform, false);
                     }
-                    Debug.Log(instance.transform.parent.name);
+                    //Debug.Log(instance.transform.parent.name);
                 }
             }
             else if (template[tempNum][i] == "小垃圾")
@@ -230,7 +232,7 @@ public class UploadFile : MonoBehaviour
                     {
                         instance.transform.SetParent(fillpos.transform, false);
                     }
-                    Debug.Log(instance.transform.parent.name);
+                    //Debug.Log(instance.transform.parent.name);
                     emptyDPos.Remove((object)fillpos);
                 }
                 else
@@ -246,7 +248,7 @@ public class UploadFile : MonoBehaviour
                     {
                         instance.transform.SetParent(fillpos.transform, false);
                     }
-                    Debug.Log(instance.transform.parent.name);
+                    //Debug.Log(instance.transform.parent.name);
                     emptyPos.Remove((object)fillpos);
                 }
             }
@@ -275,7 +277,7 @@ public class UploadFile : MonoBehaviour
                     {
                         instance.transform.SetParent(fillpos.transform, false);
                     }
-                    Debug.Log(instance.transform.parent.name);
+                    //Debug.Log(instance.transform.parent.name);
                     emptyPos.Remove((object)fillpos);
                 }
             }
@@ -291,7 +293,7 @@ public class UploadFile : MonoBehaviour
                     {
                         instance.transform.SetParent(fillpos.transform, false);
                     }
-                    Debug.Log(instance.transform.parent.name);
+                    //Debug.Log(instance.transform.parent.name);
                     emptyDPos.Remove((object)fillpos);
 
                 }
@@ -305,7 +307,7 @@ public class UploadFile : MonoBehaviour
                     {
                         instance.transform.SetParent(fillpos.transform, false);
                     }
-                    Debug.Log(instance.transform.parent.name);
+                    //Debug.Log(instance.transform.parent.name);
                     emptyPos.Remove((object)fillpos);
                 }
             }
@@ -321,7 +323,7 @@ public class UploadFile : MonoBehaviour
                     {
                         instance.transform.SetParent(fillpos.transform, false);
                     }
-                    Debug.Log(instance.transform.parent.name);
+                   // Debug.Log(instance.transform.parent.name);
                     emptyDPos.Remove((object)fillpos);
                 }
                 else
@@ -334,7 +336,7 @@ public class UploadFile : MonoBehaviour
                     {
                         instance.transform.SetParent(fillpos.transform, false);
                     }
-                    Debug.Log(instance.transform.parent.name);
+                    //Debug.Log(instance.transform.parent.name);
                     emptyPos.Remove((object)fillpos);
                 }
             }
@@ -350,7 +352,7 @@ public class UploadFile : MonoBehaviour
                     {
                         instance.transform.SetParent(fillpos.transform, false);
                     }
-                    Debug.Log(instance.transform.parent.name);
+                    //Debug.Log(instance.transform.parent.name);
                     emptyDPos.Remove((object)fillpos);
                 }
                 else
@@ -363,7 +365,7 @@ public class UploadFile : MonoBehaviour
                     {
                         instance.transform.SetParent(fillpos.transform, false);
                     }
-                    Debug.Log(instance.transform.parent.name);
+                    //Debug.Log(instance.transform.parent.name);
                     emptyPos.Remove((object)fillpos);
                 }
             }
