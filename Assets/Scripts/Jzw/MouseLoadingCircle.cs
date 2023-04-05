@@ -18,6 +18,10 @@ public class MouseLoadingCircle : MonoBehaviour
 
     private void Update()
     {
+        if (GameObject.FindGameObjectWithTag("PauseDialog") != null || GameObject.FindWithTag("ShockDialog") != null)
+        {
+            return;
+        }
         // 更新鼠标位置
         //Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //loadingCircle.transform.position = mousePosition;
@@ -27,7 +31,6 @@ public class MouseLoadingCircle : MonoBehaviour
         // 检查鼠标左键是否按下
         if (Input.GetMouseButtonDown(0))
         {
-            
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
@@ -67,5 +70,9 @@ public class MouseLoadingCircle : MonoBehaviour
                 loadingCircle.fillAmount = 0.0f;
             }
         }
+    }
+    public void SetLoadTime(float t)
+    {
+        loadingTime = t;
     }
 }

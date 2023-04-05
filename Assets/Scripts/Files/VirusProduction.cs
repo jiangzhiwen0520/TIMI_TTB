@@ -26,6 +26,7 @@ public class VirusProduction : MonoBehaviour
     }
     private void Shoot()
     {
+        if (GetComponent<fileMove>().GetD()) return;
         if (!GetComponent<fileMove>().GetStop())
         {
             if (m_canShoot&& m_canShoot2)

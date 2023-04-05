@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6503473260684258339}
   - component: {fileID: 1828949770991326940}
   - component: {fileID: 4519076251213098793}
+  - component: {fileID: -486600511738432707}
   m_Layer: 0
   m_Name: SmallVirus
   m_TagString: RVFiles
@@ -227,3 +228,17 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   AnimationCurveIndex: 0
+--- !u!114 &-486600511738432707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2770533860603615480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b07294429f2f134e9045b032fdc9c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  longPressTime: 0
+  animator: {fileID: 0}
