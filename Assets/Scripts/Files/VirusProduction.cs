@@ -41,6 +41,9 @@ public class VirusProduction : MonoBehaviour
                         Transform bulletSpawnPoint = transform;
                         bulletSpawnPoint.Rotate(0, 0, randomAngle);
                         GameObject bullet = Instantiate(bulletPrefab[Random.Range(0,bulletPrefab.Length)], bulletSpawnPoint.position, bulletSpawnPoint.rotation,transform);
+                        Vector3 origin = bullet.transform.localScale;
+                        bullet.transform.SetParent(transform.parent.parent, true);
+                        bullet.transform.localScale = origin;
                         Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
                         bullet.GetComponent<BulletController>().SetMoveVector(bulletSpawnPoint.right * Random.Range(speed.x, speed.y));
                         bulletSpawnPoint.Rotate(0, 0, -randomAngle);
