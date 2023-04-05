@@ -42,7 +42,7 @@ public class fileMove : MonoBehaviour
     {
         if (points.Count > 0)
         {
-            transform.position = points[0];
+            //transform.position = points[0];
         }
         
         m_currentPathIndex++;
@@ -113,7 +113,7 @@ public class fileMove : MonoBehaviour
             Vector2 currentTarget = points[m_currentPathIndex];
 
             // 计算移动方向和距离
-            moveDirection = currentTarget - (Vector2)transform.position;
+            moveDirection = currentTarget - (Vector2)transform.localPosition;
             distanceToTarget = moveDirection.magnitude;
         }
         
