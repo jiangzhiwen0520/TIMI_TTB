@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class StopDialogController : MonoBehaviour
 {
@@ -52,6 +55,8 @@ public class StopDialogController : MonoBehaviour
     }
     public void MouseClickQ()
     {
+        string filePath = Application.dataPath + "/task.csv";
+        WriteCsv(filePath);//写入本地
 
         //GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(0);
 #if UNITY_EDITOR
@@ -60,5 +65,21 @@ public class StopDialogController : MonoBehaviour
             Application.Quit();//否则在打包文件中
     #endif
 
+    }
+    public void WriteCsv(string path)
+    {
+        if (!File.Exists(path))
+        {
+            File.Create(path).Dispose();
+        }
+        FileStream fs = File.Open(path, FileMode.Open, FileAccess.Write);
+        Scene scene = SceneManager.GetActiveScene();
+        string str = scene.name;
+        Debug.Log(scene.name);
+        byte[] info = new UTF8Encoding(true).GetBytes(str);
+        //添加数据到文件中
+        fs.Flush();
+        fs.Write(info, 0, info.Length);
+        fs.Close();
     }
 }

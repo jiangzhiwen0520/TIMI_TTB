@@ -8,6 +8,7 @@ public class DialogController : MonoBehaviour
 {
     private string[] ms;
     private Sprite[] imgs;
+    private float[] times;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class DialogController : MonoBehaviour
         {
             transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = ms[i];
             transform.GetChild(2).GetComponent<Image>().sprite = imgs[i];
-            yield return new WaitForSecondsRealtime(1);
+            yield return new WaitForSecondsRealtime(times[i]);
             if (i == ms.Length - 1)
                 i = -1;
         }
@@ -41,10 +42,11 @@ public class DialogController : MonoBehaviour
         Destroy(g);
         //gameObject.transform.parent.parent.gameObject.SetActive(false);
     }
-    public void SetMs(string[] s, Sprite[] i)
+    public void SetMs(string[] s, Sprite[] i,float[] t)
     {
         ms = s;
         imgs = i;
+        times = t;
         //transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = ms[0];
         //transform.GetChild(2).GetComponent<Image>().sprite = imgs[0];
         if (gameObject.activeSelf)

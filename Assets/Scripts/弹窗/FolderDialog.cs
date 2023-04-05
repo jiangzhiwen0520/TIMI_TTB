@@ -8,6 +8,7 @@ public class FolderDialog : MonoBehaviour
 {
     public string[] message;
     public Sprite[] picture;
+    public float[] showTime;
     public GameObject dialog;
     public bool isFirst=true;
     // Start is called before the first frame update
@@ -26,7 +27,7 @@ public class FolderDialog : MonoBehaviour
         if (isFirst)
         {
             GameObject a=Instantiate(dialog);
-            a.transform.GetChild(0).GetComponent<DialogController>().SetMs(message, picture);
+            a.transform.GetChild(0).GetComponent<DialogController>().SetMs(message, picture,showTime);
             
             isFirst = false;
         }

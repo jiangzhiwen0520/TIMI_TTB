@@ -2342,6 +2342,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6493890329795356451, guid: 2d6b62755e47f3b44bca296d83b823b0, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 151940953}
+    - target: {fileID: 6493890329795356451, guid: 2d6b62755e47f3b44bca296d83b823b0, type: 3}
+      propertyPath: sourceParent
+      value: 
+      objectReference: {fileID: 765679266}
     - target: {fileID: 6493890329795356476, guid: 2d6b62755e47f3b44bca296d83b823b0, type: 3}
       propertyPath: m_Name
       value: "\u91CD\u8981\u6587\u4EF6"
@@ -4482,6 +4490,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &765679266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7465282688982700688, guid: 7ba51340b3dc8834cacc73f70d6742c3, type: 3}
+  m_PrefabInstance: {fileID: 205971566}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &779457742
 PrefabInstance:
   m_ObjectHideFlags: 0
