@@ -61,6 +61,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Scripts\Items\Key.cs" />
+    <Compile Include="Assets\Scripts\NextPanel.cs" />
     <Compile Include="Assets\StartGame.cs" />
     <Compile Include="Assets\Scripts\Jzw\FileSystem.cs" />
     <Compile Include="Assets\Scripts\Items\ItemController.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Assets\Scripts\Jzw\MouseLoadingCircle.cs" />
     <Compile Include="Assets\Scripts\Files\ColliderClip.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioContonller.cs" />
+    <Compile Include="Assets\Scripts\RestartPanel.cs" />
     <Compile Include="Assets\Scripts\DeleteFolder.cs" />
     <Compile Include="Assets\Scripts\TimeAdd.cs" />
     <Compile Include="Assets\Scripts\Jzw\ShowInfo.cs" />

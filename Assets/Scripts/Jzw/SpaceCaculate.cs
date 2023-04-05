@@ -5,8 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 public class SpaceCaculate : MonoBehaviour
-{
-    //暂时用文件个数代替空间
+{  
     private int fileSpace=0;
 
     public TextMeshProUGUI countText;
@@ -20,11 +19,15 @@ public class SpaceCaculate : MonoBehaviour
         GameObject[] allGameObjects = Resources.FindObjectsOfTypeAll<GameObject>();
         foreach (GameObject obj in allGameObjects)
         {
-            if (obj.CompareTag("Position"))
+            if (obj.CompareTag("Position")|| obj.CompareTag("DPosition"))
+            //if (obj.CompareTag("Position") )
             {
                 pos.Add(obj);
+                //Debug.Log(obj.name);
             }
         }
+
+        //Debug.Log("jj"+pos.Count);
         for (int i = 0; i < pos.Count; i++)
         {
             if (pos[i].transform.childCount > 0)
@@ -80,11 +83,12 @@ public class SpaceCaculate : MonoBehaviour
 
     public  void CaculateSpace()
     {
+        fileSpace = 0;
         List<GameObject> pos = new List<GameObject>();
         GameObject[] allGameObjects = Resources.FindObjectsOfTypeAll<GameObject>();
         foreach (GameObject obj in allGameObjects)
         {
-            if (obj.CompareTag("Position") )
+            if (obj.CompareTag("Position") || obj.CompareTag("DPosition"))
             {
 
                 pos.Add(obj);
@@ -116,53 +120,53 @@ public class SpaceCaculate : MonoBehaviour
             }
             else if (pos[i].transform.childCount > 0)
             {
-                if (pos[i].transform.GetChild(0).name == "普通文件")
+                if (pos[i].transform.GetChild(0).name.Contains( "普通文件"))
                 {
                     fileSpace += 1;
                 }
             }
         }
 
-        List<GameObject> dpos = new List<GameObject>();
+        //List<GameObject> dpos = new List<GameObject>();
         
-        foreach (GameObject obj in allGameObjects)
-        {
-            if (obj.CompareTag("DPosition") && obj.transform.GetChild(0).tag != "Folder")
-            {
-                dpos.Add(obj);
-            }
-        }
+        //foreach (GameObject obj in allGameObjects)
+        //{
+        //    if (obj.CompareTag("DPosition") && obj.transform.GetChild(0).tag != "Folder")
+        //    {
+        //        dpos.Add(obj);
+        //    }
+        //}
 
-        for (int i = 0; i < dpos.Count; i++)
-        {
-            if (dpos[i].transform.childCount > 0)
-            {
-                if (dpos[i].transform.GetChild(0).name.Contains("小"))
-                {
-                    fileSpace += 1;
-                }
-            }
-            else if (dpos[i].transform.childCount > 0)
-            {
-                if (dpos[i].transform.GetChild(0).name.Contains("中"))
-                {
-                    fileSpace += 2;
-                }
-            }
-            else if (dpos[i].transform.childCount > 0)
-            {
-                if (dpos[i].transform.GetChild(0).name.Contains("大"))
-                {
-                    fileSpace += 4;
-                }
-            }
-            else if (dpos[i].transform.childCount > 0)
-            {
-                if (dpos[i].transform.GetChild(0).name=="普通文件")
-                {
-                    fileSpace += 1;
-                }
-            }
-        }
+        //for (int i = 0; i < dpos.Count; i++)
+        //{
+        //    if (dpos[i].transform.childCount > 0)
+        //    {
+        //        if (dpos[i].transform.GetChild(0).name.Contains("小"))
+        //        {
+        //            fileSpace += 1;
+        //        }
+        //    }
+        //    else if (dpos[i].transform.childCount > 0)
+        //    {
+        //        if (dpos[i].transform.GetChild(0).name.Contains("中"))
+        //        {
+        //            fileSpace += 2;
+        //        }
+        //    }
+        //    else if (dpos[i].transform.childCount > 0)
+        //    {
+        //        if (dpos[i].transform.GetChild(0).name.Contains("大"))
+        //        {
+        //            fileSpace += 4;
+        //        }
+        //    }
+        //    else if (dpos[i].transform.childCount > 0)
+        //    {
+        //        if (dpos[i].transform.GetChild(0).name=="普通文件")
+        //        {
+        //            fileSpace += 1;
+        //        }
+        //    }
+        //}
     }
 }
