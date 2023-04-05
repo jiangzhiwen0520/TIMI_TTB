@@ -14,8 +14,7 @@ TagManager:
   - RVFiles
   - ShockDialog
   - PauseDialog
-  - FirstPoints
-  - DPosition
+
   layers:
   - Default
   - TransparentFX

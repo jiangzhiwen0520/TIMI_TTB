@@ -22,14 +22,17 @@ public class FileChoose : MonoBehaviour
         
     }
 
-    
+    /*private void OnEnable()
+    {
+        if(originalScale!=null)
+            transform.localScale = originalScale;
+    }*/
 
     private void Update()
     {
         if (isMouseOver)
         {
             transform.localScale = originalScale * hoverScaleFactor;
-
 
            
         }
