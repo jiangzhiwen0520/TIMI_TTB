@@ -37,6 +37,7 @@ public class KeyFileMove : MonoBehaviour
                 gameObject.GetComponent<FileChoose>().enabled = false;
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 gameObject.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.5f);
+                GameObject.Find("“Ù∆µœµÕ≥").GetComponent<changeBgm>().SetClip();
             }
         }
 
