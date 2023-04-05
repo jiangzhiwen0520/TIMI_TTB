@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7958672125505165683}
   - component: {fileID: 7958672125505165680}
   - component: {fileID: 7958672125505165681}
-  - component: {fileID: -5268177821245455369}
+  - component: {fileID: 1285506130900116049}
   m_Layer: 5
   m_Name: "\u5B58\u50A8\u6761\u9884\u77E5\u4F53 "
   m_TagString: Untagged
@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 42, y: -490.57904}
-  m_SizeDelta: {x: 909.2861, y: 35.263}
+  m_AnchoredPosition: {x: 42, y: -481}
+  m_SizeDelta: {x: 909.2861, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7958672125505165680
 CanvasRenderer:
@@ -67,17 +67,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: faac9782a42c24245bb45708529a8b3c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c58b4dd76cb4aebb8d48e0d0853bd6, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-5268177821245455369
+--- !u!114 &1285506130900116049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,5 +89,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14755a6c4e49b4982b9dfdb9cbcac1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllPoints: {fileID: 0}
-  Space: {fileID: 0}

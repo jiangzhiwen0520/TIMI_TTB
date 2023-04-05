@@ -22,7 +22,7 @@ public class fileMove : MonoBehaviour
     private bool m_isStop = false;
     private float m_time = 5;
     private Vector3 moveVector;
-
+    private bool m_destory;
     private float distanceToTarget;
     private Vector2 moveDirection;
     //private GameObject[] objects;
@@ -69,6 +69,10 @@ public class fileMove : MonoBehaviour
     }
     public void LoopMove()
     {
+        if (m_destory)
+        {
+            return;
+        }
         if (m_fast)
         {
             if (Curve == null)
@@ -136,13 +140,13 @@ public class fileMove : MonoBehaviour
     {
         m_slow = true;
         m_fast = false;
-        GetComponent<VirusProduction>().SetCanShoot2(false);
+        if (GetComponent<VirusProduction>() != null) GetComponent<VirusProduction>().SetCanShoot2(false);
     }
     private void OnMouseExit()
     {
         m_fast = true;
         m_slow = false;
-        GetComponent<VirusProduction>().SetCanShoot2(true);
+        if(GetComponent<VirusProduction>()!=null) GetComponent<VirusProduction>().SetCanShoot2(true);
     }
     public void SetStop()
     {
@@ -156,4 +160,12 @@ public class fileMove : MonoBehaviour
     {
         return m_isStop;
     }
-}
+    public void SetD()
+    {
+        m_destory = true;
+    }
+    public bool GetD()
+    {
+        return m_destory;
+    }
+    }

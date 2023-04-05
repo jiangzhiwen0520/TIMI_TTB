@@ -28,6 +28,7 @@ public class DeleteFileTest : MonoBehaviour
             Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
             if (hitCollider != null && hitCollider.transform == transform)
             {
+                GameObject.Find("LoadingCircle").GetComponent<MouseLoadingCircle>().SetLoadTime(longPressTime);
                 isPressing = true;
             }
         }
@@ -48,7 +49,9 @@ public class DeleteFileTest : MonoBehaviour
             if (pressTimer >= longPressTime)
             {
                 //GameObject.Find("–ßπ˚“Ù–ß").GetComponent<AudioContonller>().SetAudio(2);
+                
                 animator.SetTrigger("destroy");
+                if (GetComponent<fileMove>() != null) GetComponent<fileMove>().SetD();
                 pressTimer = 0f;
                 isPressing = false;
             }
@@ -75,6 +78,7 @@ public class DeleteFileTest : MonoBehaviour
             {
                 
                 a.GetComponent<Hammer>().Func();
+                GetComponent<fileMove>().SetD();
                 animator.SetTrigger("destroy");
                 //Destroy(gameObject,1);
             }
