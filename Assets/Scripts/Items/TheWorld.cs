@@ -42,6 +42,7 @@ public class TheWorld : Item
     public override void Func()
     {
         GetComponent<Animator>().SetTrigger("erase");
+        GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(6);
         //所有文件和病毒子弹停止移动
         GameObject[] objects= GameObject.FindGameObjectsWithTag("Bullet"); 
         foreach(GameObject i in objects)

@@ -26,6 +26,7 @@ public class FireWall : Item
     {
         //设置无敌时间
         GetComponent<Animator>().SetTrigger("erase");
+        GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(6);
         GameObject[] objects= GameObject.FindGameObjectsWithTag("Bullet");
         foreach (GameObject i in objects)
         {

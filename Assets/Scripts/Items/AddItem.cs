@@ -33,6 +33,7 @@ public class AddItem : MonoBehaviour
             }
             else
             {
+                GameObject.Find("–ßπ˚“Ù–ß").GetComponent<AudioContonller>().SetAudio(7);
                 m_ic.ShowItems();
                 Destroy(gameObject);
             }

@@ -25,6 +25,7 @@ public class Key : Item
     public override void Func()
     {
         GetComponent<Animator>().SetTrigger("erase");
+        GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(6);
         //改变加密文件的logo，目前可能在点击处更好实现
     }
     public void MyDestroy()

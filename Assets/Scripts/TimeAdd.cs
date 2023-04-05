@@ -44,7 +44,8 @@ public class TimeAdd : MonoBehaviour
             else
             {
                 countText.text = i.ToString() + "/20";
-                yield return new WaitForSeconds(1);
+                if(i!=20)
+                    yield return new WaitForSeconds(1);
             }
         }
     }
@@ -52,7 +53,7 @@ public class TimeAdd : MonoBehaviour
     {
         if (!stopUpload)
         {
-            Debug.Log("更新");
+            //Debug.Log("更新");
 
             // 按每秒填充的速度增加填充量
             currentFillAmount += fillSpeed * Time.deltaTime;
@@ -61,6 +62,7 @@ public class TimeAdd : MonoBehaviour
             // 如果超过了目标填充量，则重置为0
             if (currentFillAmount >= targetFillAmount)
             {
+                StartCoroutine(Count());
                 isUpload = true;
                 GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(1);
                 currentFillAmount = 0f;
@@ -71,7 +73,7 @@ public class TimeAdd : MonoBehaviour
         }
         else
         {
-            Debug.Log("暂停更新");
+            //Debug.Log("暂停更新");
             m_deltaTime -= Time.deltaTime;
             if (m_deltaTime <= 0)
             {

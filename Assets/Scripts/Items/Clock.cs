@@ -38,9 +38,10 @@ public class Clock: Item
     }
     public override void Func()
     {
-        Debug.Log("暂停上传");
+        //Debug.Log("暂停上传");
         GameObject.Find("时间条").GetComponent<TimeAdd>().SetStopUpload();
         GetComponent<Animator>().SetTrigger("erase");
+        GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(6);
         //调用暂停文件5秒上传函数，可以设置个信号
         //
         //

@@ -47,7 +47,7 @@ public class DeleteFileTest : MonoBehaviour
             // 如果计时器达到长按时间，删除对象并重置计时器
             if (pressTimer >= longPressTime)
             {
-                GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(2);
+                //GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(2);
                 animator.SetTrigger("destroy");
                 pressTimer = 0f;
                 isPressing = false;
@@ -59,6 +59,7 @@ public class DeleteFileTest : MonoBehaviour
 
     public void DestoryFile()
     {
+        GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(2);
         Destroy(gameObject);
     }
     private void OnMouseOver()
@@ -72,10 +73,9 @@ public class DeleteFileTest : MonoBehaviour
             }
             else
             {
-                GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(2);
+                
                 a.GetComponent<Hammer>().Func();
                 animator.SetTrigger("destroy");
-
                 //Destroy(gameObject,1);
             }
         }

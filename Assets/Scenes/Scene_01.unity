@@ -4774,6 +4774,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991701577}
   m_CullTransparentMesh: 1
+--- !u!1 &1011297343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7465282690694651304, guid: 7ba51340b3dc8834cacc73f70d6742c3, type: 3}
+  m_PrefabInstance: {fileID: 483886478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1012076543
 GameObject:
   m_ObjectHideFlags: 0
@@ -4963,10 +4968,12 @@ MonoBehaviour:
   audios:
   - {fileID: 8300000, guid: 023bb4f1fdccd514b94336d847f33b72, type: 3}
   - {fileID: 8300000, guid: f0edc8733ebe5424e89f878654c0ccc6, type: 3}
-  - {fileID: 8300000, guid: 33f18ae656fc78d4ebb00b926b1f9b0e, type: 3}
-  - {fileID: 8300000, guid: 80409815719755540b3703767e4a98ec, type: 3}
+  - {fileID: 8300000, guid: 1c7163970b27dd44e812822b1b27eb24, type: 3}
+  - {fileID: 8300000, guid: e9a418fb01fef1a418f8572c197c1a1c, type: 3}
   - {fileID: 8300000, guid: 4dc6919d460781a4bbc375b2918ad9ed, type: 3}
   - {fileID: 8300000, guid: 2188dfe0b28bd3b458d55a266a648597, type: 3}
+  - {fileID: 8300000, guid: ec864d848d833a14abe960aacf1896a4, type: 3}
+  - {fileID: 8300000, guid: 0d3f8fc08350cc240add94bb3660c273, type: 3}
 --- !u!82 &1035808961
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8026,6 +8033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorTexture:
   - {fileID: 2800000, guid: f35e769e4090d5e459d24fefbc345cad, type: 3}
+  - {fileID: 2800000, guid: 30ff45a58fe46bc469a121780b7e4d59, type: 3}
   hotSpot: {x: 0, y: 0}
 --- !u!4 &1528812829
 Transform:
@@ -9719,10 +9727,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1396353663}
     m_Modifications:
+    - target: {fileID: 2127808643201249413, guid: a3b89b289dce4994190b8188e3e51de6, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5759270519724409041, guid: a3b89b289dce4994190b8188e3e51de6, type: 3}
       propertyPath: parent
       value: 
       objectReference: {fileID: 402725769}
+    - target: {fileID: 6628409433109963355, guid: a3b89b289dce4994190b8188e3e51de6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 407336b617b100a41b92716c03b199b2, type: 2}
     - target: {fileID: 7830513524495561731, guid: a3b89b289dce4994190b8188e3e51de6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -11003,6 +11019,10 @@ PrefabInstance:
       propertyPath: bounds.width
       value: 7.66
       objectReference: {fileID: 0}
+    - target: {fileID: 6493890329795356451, guid: 2d6b62755e47f3b44bca296d83b823b0, type: 3}
+      propertyPath: sourceParent
+      value: 
+      objectReference: {fileID: 1011297343}
     - target: {fileID: 6493890329795356451, guid: 2d6b62755e47f3b44bca296d83b823b0, type: 3}
       propertyPath: bounds.height
       value: 4.24

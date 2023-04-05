@@ -97,6 +97,8 @@ public class BulletController : MonoBehaviour
             {
                     //Debug.Log("触发弹窗");
                 GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(5);
+                GameObject kf = GameObject.Find("重要文件");
+                if(kf!=null) kf.GetComponent<KeyFileMove>().Reset();
                 Instantiate(dialog);
                 //dialog.GetComponent<UiTimeBar>().SetStart();
                 //触发弹窗的接口;
