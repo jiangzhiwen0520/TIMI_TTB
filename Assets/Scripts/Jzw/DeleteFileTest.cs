@@ -64,6 +64,7 @@ public class DeleteFileTest : MonoBehaviour
     {
         GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(2);
         Destroy(gameObject);
+        GameObject.Find("存储条").GetComponent<SpaceCaculate>().CaculateSpace();
     }
     private void OnMouseOver()
     {

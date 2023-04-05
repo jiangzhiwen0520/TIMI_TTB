@@ -43,10 +43,21 @@ public class UploadFile : MonoBehaviour
 
     private void Start()
     {
-        GameObject[] pos = GameObject.FindGameObjectsWithTag("Position");
-        for (int i = 0; i < pos.Length; i++)
+        //GameObject[] pos = GameObject.FindGameObjectsWithTag("Position");
+
+        List<GameObject> pos = new List<GameObject>();
+        GameObject[] allGameObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+        foreach (GameObject obj in allGameObjects)
         {
-            if (pos[i].transform.childCount == 1)
+            if (obj.CompareTag("Position"))
+            {
+                pos.Add(obj);
+            }
+        }
+
+        for (int i = 0; i < pos.Count; i++)
+        {
+            if (pos[i].transform.childCount >0)
             {
                 pos[i].tag="DPosition";
             }
@@ -60,7 +71,7 @@ public class UploadFile : MonoBehaviour
             FindEmptyPos();
             FileGenerate();
             FileFill();
-            GameObject.Find("存储条").GetComponent<SpaceCaculate>();
+            GameObject.Find("存储条").GetComponent<SpaceCaculate>().CaculateSpace();
             GameObject.Find("时间条").GetComponent<TimeAdd>().isUpload = false;
         }
 
@@ -69,16 +80,35 @@ public class UploadFile : MonoBehaviour
 
     void FindEmptyPos()
     {
-        GameObject[] pos = GameObject.FindGameObjectsWithTag("Position");
-        GameObject[] dpos = GameObject.FindGameObjectsWithTag("DPosition");
-        for (int i = 0; i < pos.Length; i++)
+        //GameObject[] pos = GameObject.FindGameObjectsWithTag("Position");
+        List<GameObject> pos = new List<GameObject>();
+        GameObject[] allGameObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+        foreach (GameObject obj in allGameObjects)
+        {
+            if (obj.CompareTag("Position"))
+            {
+                pos.Add(obj);
+            }
+        }
+
+        List<GameObject> dpos = new List<GameObject>();
+        
+        foreach (GameObject obj in allGameObjects)
+        {
+            if (obj.CompareTag("DPosition"))
+            {
+                dpos.Add(obj);
+            }
+        }
+        //GameObject[] dpos = GameObject.FindGameObjectsWithTag("DPosition");
+        for (int i = 0; i < pos.Count; i++)
         {
             if (pos[i].transform.childCount == 0)
             {
                 emptyPos.Add(pos[i]);
             }
         }
-        for (int i = 0; i < dpos.Length; i++)
+        for (int i = 0; i < dpos.Count; i++)
         {
             if (dpos[i].transform.childCount == 0)
             {

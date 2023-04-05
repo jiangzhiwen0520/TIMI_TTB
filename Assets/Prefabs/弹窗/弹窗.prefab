@@ -325,8 +325,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37, y: -58.1}
-  m_SizeDelta: {x: 537.2399, y: 50}
+  m_AnchoredPosition: {x: 38.0766, y: -58.1}
+  m_SizeDelta: {x: 539.3931, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8359530060961291540
 CanvasRenderer:
@@ -358,8 +358,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Error!...Error!!\u4F60\u60CA\u52A8\u4E86\u75C5\u6BD2\uFF0C\u7CFB\u7EDF\u762B\u75EA\uFF0C5s\u540E\u91CD\u542F\uFF01"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 65c990f6d96528a41bb6f1ac803a7735, type: 2}
-  m_sharedMaterial: {fileID: -4184710307828051181, guid: 65c990f6d96528a41bb6f1ac803a7735, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6819d16a34c32ed43b795a0ae0a497dc, type: 2}
+  m_sharedMaterial: {fileID: -5062378753302400940, guid: 6819d16a34c32ed43b795a0ae0a497dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 64.60095, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

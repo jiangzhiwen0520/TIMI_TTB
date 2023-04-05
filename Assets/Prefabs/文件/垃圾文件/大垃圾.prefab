@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b07294429f2f134e9045b032fdc9c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longPressTime: 3
+  longPressTime: 2.5
   animator: {fileID: 7451697615361223946}
 --- !u!95 &7451697615361223946
 Animator:

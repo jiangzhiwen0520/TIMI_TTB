@@ -7,7 +7,7 @@ using TMPro;
 public class SpaceCaculate : MonoBehaviour
 {
     //暂时用文件个数代替空间
-    private int fileNum=0;
+    private int fileSpace=0;
 
     public TextMeshProUGUI countText;
     // Start is called before the first frame update
@@ -15,6 +15,7 @@ public class SpaceCaculate : MonoBehaviour
     {
         //Debug.Log(GameObject.FindGameObjectsWithTag("Position").Length);
         //GameObject[] pos= Resources.FindObjectsOfTypeAll<GameObject>().
+
         List<GameObject> pos = new List<GameObject>();
         GameObject[] allGameObjects = Resources.FindObjectsOfTypeAll<GameObject>();
         foreach (GameObject obj in allGameObjects)
@@ -28,24 +29,50 @@ public class SpaceCaculate : MonoBehaviour
         {
             if (pos[i].transform.childCount > 0)
             {
-                if ( pos[i].transform.GetChild(0).tag != "Folder")
+                if ( pos[i].transform.GetChild(0).name.Contains("小"))
                 {
-                    fileNum++;
+                    fileSpace+=1;
                 }
             }
-           
+            else if (pos[i].transform.childCount > 0)
+            {
+                if (pos[i].transform.GetChild(0).name.Contains("中"))
+                {
+                    fileSpace += 2;
+                }
+            }
+            else if (pos[i].transform.childCount > 0)
+            {
+                if (pos[i].transform.GetChild(0).name.Contains("大"))
+                {
+                    fileSpace += 4;
+                }
+            }
+            else if (pos[i].transform.childCount > 0)
+            {
+                if (pos[i].transform.GetChild(0).name == "普通文件")
+                {
+                    fileSpace += 1;
+                }
+            }
+
         }
-        Debug.Log(fileNum);
-        CaculateSpace();
+        Debug.Log(fileSpace);
+        //CaculateSpace();
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameObject.Find("存储条").GetComponent<Image>().fillAmount = fileNum / 40;
-        if (fileNum < 10)
+        Debug.Log(fileSpace);
+        GameObject.Find("存储条").GetComponent<Image>().fillAmount = fileSpace / 50f;
+        if (fileSpace < 10)
         {
-            countText.text ="0"+fileNum + "/40";
+            countText.text = "0" + fileSpace + "/50";
+        }
+        else
+        {
+            countText.text = fileSpace + "/50";
         }
        // Debug.Log(fileNum);
 
@@ -66,9 +93,33 @@ public class SpaceCaculate : MonoBehaviour
 
         for (int i = 0; i < pos.Count; i++)
         {
-            if (pos[i].transform.childCount >0 )
+            if (pos[i].transform.childCount > 0)
             {
-                fileNum++;
+                if (pos[i].transform.GetChild(0).name.Contains("小"))
+                {
+                    fileSpace += 1;
+                }
+            }
+            else if (pos[i].transform.childCount > 0)
+            {
+                if (pos[i].transform.GetChild(0).name.Contains("中"))
+                {
+                    fileSpace += 2;
+                }
+            }
+            else if (pos[i].transform.childCount > 0)
+            {
+                if (pos[i].transform.GetChild(0).name.Contains("大"))
+                {
+                    fileSpace += 4;
+                }
+            }
+            else if (pos[i].transform.childCount > 0)
+            {
+                if (pos[i].transform.GetChild(0).name == "普通文件")
+                {
+                    fileSpace += 1;
+                }
             }
         }
 
@@ -84,9 +135,33 @@ public class SpaceCaculate : MonoBehaviour
 
         for (int i = 0; i < dpos.Count; i++)
         {
-            if (dpos[i].transform.childCount > 1)
+            if (dpos[i].transform.childCount > 0)
             {
-                fileNum++;
+                if (dpos[i].transform.GetChild(0).name.Contains("小"))
+                {
+                    fileSpace += 1;
+                }
+            }
+            else if (dpos[i].transform.childCount > 0)
+            {
+                if (dpos[i].transform.GetChild(0).name.Contains("中"))
+                {
+                    fileSpace += 2;
+                }
+            }
+            else if (dpos[i].transform.childCount > 0)
+            {
+                if (dpos[i].transform.GetChild(0).name.Contains("大"))
+                {
+                    fileSpace += 4;
+                }
+            }
+            else if (dpos[i].transform.childCount > 0)
+            {
+                if (dpos[i].transform.GetChild(0).name=="普通文件")
+                {
+                    fileSpace += 1;
+                }
             }
         }
     }
