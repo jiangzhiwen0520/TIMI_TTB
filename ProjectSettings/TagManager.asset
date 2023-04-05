@@ -16,6 +16,7 @@ TagManager:
   - PauseDialog
   - FirstPoints
   - DPosition
+  - KeyPosition
   layers:
   - Default
   - TransparentFX

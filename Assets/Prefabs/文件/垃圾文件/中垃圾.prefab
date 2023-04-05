@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b07294429f2f134e9045b032fdc9c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longPressTime: 2
+  longPressTime: 1
   animator: {fileID: 5085034772918545730}
 --- !u!95 &5085034772918545730
 Animator:

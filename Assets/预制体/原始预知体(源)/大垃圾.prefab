@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4695309521522381411}
   - component: {fileID: 983614022567719108}
   - component: {fileID: 2515572847729373571}
-  - component: {fileID: -9096693170225270492}
   - component: {fileID: 7345532595258711007}
   m_Layer: 0
   m_Name: "\u5927\u5783\u573E"
@@ -128,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverScaleFactor: 1.2
+  isMouseOver: 0
 --- !u!114 &2515572847729373571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,23 +140,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b07294429f2f134e9045b032fdc9c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longPressTime: 2
---- !u!114 &-9096693170225270492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5549144017562467582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b07294429f2f134e9045b032fdc9c1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  longPressTime: 2
+  longPressTime: 2.5
+  animator: {fileID: 0}
 --- !u!95 &7345532595258711007
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -173,4 +161,5 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

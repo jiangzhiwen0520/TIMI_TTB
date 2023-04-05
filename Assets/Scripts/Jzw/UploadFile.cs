@@ -43,10 +43,22 @@ public class UploadFile : MonoBehaviour
 
     private void Start()
     {
-        GameObject[] pos = GameObject.FindGameObjectsWithTag("Position");
-        for (int i = 0; i < pos.Length; i++)
+        GameObject.Find("重要文件").transform.parent.tag = "KeyPosition";
+        //GameObject[] pos = GameObject.FindGameObjectsWithTag("Position");
+
+        List<GameObject> pos = new List<GameObject>();
+        GameObject[] allGameObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+        foreach (GameObject obj in allGameObjects)
         {
-            if (pos[i].transform.childCount == 1)
+            if (obj.CompareTag("Position"))
+            {
+                pos.Add(obj);
+            }
+        }
+
+        for (int i = 0; i < pos.Count; i++)
+        {
+            if (pos[i].transform.childCount >0)
             {
                 pos[i].tag="DPosition";
             }
@@ -57,10 +69,11 @@ public class UploadFile : MonoBehaviour
     {
         if (GameObject.Find("时间条").GetComponent<TimeAdd>().isUpload)
         {
+            emptyPos.Clear();
+            emptyDPos.Clear();
             FindEmptyPos();
-            FileGenerate();
-            FileFill();
-            GameObject.Find("存储条").GetComponent<SpaceCaculate>();
+            FileGenerate();        
+            GameObject.Find("存储条").GetComponent<SpaceCaculate>().CaculateSpace();
             GameObject.Find("时间条").GetComponent<TimeAdd>().isUpload = false;
         }
 
@@ -69,16 +82,35 @@ public class UploadFile : MonoBehaviour
 
     void FindEmptyPos()
     {
-        GameObject[] pos = GameObject.FindGameObjectsWithTag("Position");
-        GameObject[] dpos = GameObject.FindGameObjectsWithTag("DPosition");
-        for (int i = 0; i < pos.Length; i++)
+        //GameObject[] pos = GameObject.FindGameObjectsWithTag("Position");
+        List<GameObject> pos = new List<GameObject>();
+        List<GameObject> dpos = new List<GameObject>();
+        GameObject[] allGameObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+        foreach (GameObject obj in allGameObjects)
+        {
+            if (obj.CompareTag("Position"))
+            {
+                pos.Add(obj);
+
+            }
+            else if (obj.CompareTag("DPosition"))
+            {
+                dpos.Add(obj);
+            }
+        }
+
+        
+        
+     
+        //GameObject[] dpos = GameObject.FindGameObjectsWithTag("DPosition");
+        for (int i = 0; i < pos.Count; i++)
         {
             if (pos[i].transform.childCount == 0)
             {
                 emptyPos.Add(pos[i]);
             }
         }
-        for (int i = 0; i < dpos.Length; i++)
+        for (int i = 0; i < dpos.Count; i++)
         {
             if (dpos[i].transform.childCount == 0)
             {
@@ -107,19 +139,27 @@ public class UploadFile : MonoBehaviour
                 if (emptyDPos.Count > 0)
                 {
                     GameObject fillpos = (GameObject)emptyDPos[Random.Range(0, emptyDPos.Count)];
+                    emptyDPos.Remove((object)fillpos);
                     GameObject instance = Instantiate(virus_small, fillpos.transform.position, Quaternion.identity);
-
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform,true);                  
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                         instance.transform.SetParent(fillpos.transform, false);
+                    }
+                   
+                    Debug.Log(instance.transform.parent.name);
                 }
                 else
                 {
                     GameObject fillpos = (GameObject)emptyPos[Random.Range(0, emptyPos.Count)];
+                    emptyPos.Remove((object)fillpos);
                     GameObject instance = Instantiate(virus_small, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    Debug.Log(instance.transform.parent.name);
                 }
                 
 
@@ -129,18 +169,26 @@ public class UploadFile : MonoBehaviour
                 if (emptyDPos.Count > 0)
                 {
                     GameObject fillpos = (GameObject)emptyDPos[Random.Range(0, emptyDPos.Count)];
+                    emptyDPos.Remove((object)fillpos);
                     GameObject instance = Instantiate(virus_mid, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    Debug.Log(instance.transform.parent.name);
                 }
                 else
                 {
                     GameObject fillpos = (GameObject)emptyPos[Random.Range(0, emptyPos.Count)];
+                    emptyPos.Remove((object)fillpos);
                     GameObject instance = Instantiate(virus_mid, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    Debug.Log(instance.transform.parent.name);
                 }
             }
             else if (template[tempNum][i] == "大病毒")
@@ -148,18 +196,26 @@ public class UploadFile : MonoBehaviour
                 if (emptyDPos.Count > 0)
                 {
                     GameObject fillpos = (GameObject)emptyDPos[Random.Range(0, emptyDPos.Count)];
+                    emptyDPos.Remove((object)fillpos);
                     GameObject instance = Instantiate(virus_big, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    Debug.Log(instance.transform.parent.name);
                 }
                 else
                 {
                     GameObject fillpos = (GameObject)emptyPos[Random.Range(0, emptyPos.Count)];
+                    emptyPos.Remove((object)fillpos);
                     GameObject instance = Instantiate(virus_big, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    Debug.Log(instance.transform.parent.name);
                 }
             }
             else if (template[tempNum][i] == "小垃圾")
@@ -167,18 +223,31 @@ public class UploadFile : MonoBehaviour
                 if (emptyDPos.Count > 0)
                 {
                     GameObject fillpos = (GameObject)emptyDPos[Random.Range(0, emptyDPos.Count)];
+                    
                     GameObject instance = Instantiate(junk_small, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    Debug.Log(instance.transform.parent.name);
+                    emptyDPos.Remove((object)fillpos);
                 }
                 else
                 {
                     GameObject fillpos = (GameObject)emptyPos[Random.Range(0, emptyPos.Count)];
+                   
                     GameObject instance = Instantiate(junk_small, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    //Vector3 originalScale = instance.transform.localScale;
+                    //instance.transform.SetParent(fillpos.transform, true);
+                    //instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    Debug.Log(instance.transform.parent.name);
+                    emptyPos.Remove((object)fillpos);
                 }
             }
             else if (template[tempNum][i] == "中垃圾")
@@ -186,19 +255,28 @@ public class UploadFile : MonoBehaviour
                 if (emptyDPos.Count > 0)
                 {
                     GameObject fillpos = (GameObject)emptyDPos[Random.Range(0, emptyDPos.Count)];
+                    
                     GameObject instance = Instantiate(junk_mid, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    emptyDPos.Remove((object)fillpos);
 
                 }
                 else
                 {
                     GameObject fillpos = (GameObject)emptyPos[Random.Range(0, emptyPos.Count)];
+                    
                     GameObject instance = Instantiate(junk_mid, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    Debug.Log(instance.transform.parent.name);
+                    emptyPos.Remove((object)fillpos);
                 }
             }
             else if (template[tempNum][i] == "大垃圾")
@@ -206,19 +284,29 @@ public class UploadFile : MonoBehaviour
                 if (emptyDPos.Count > 0)
                 {
                     GameObject fillpos = (GameObject)emptyDPos[Random.Range(0, emptyDPos.Count)];
+                    
                     GameObject instance = Instantiate(junk_big, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    Debug.Log(instance.transform.parent.name);
+                    emptyDPos.Remove((object)fillpos);
 
                 }
                 else
                 {
                     GameObject fillpos = (GameObject)emptyPos[Random.Range(0, emptyPos.Count)];
+                    
                     GameObject instance = Instantiate(junk_big, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    Debug.Log(instance.transform.parent.name);
+                    emptyPos.Remove((object)fillpos);
                 }
             }
             else if (template[tempNum][i] == "小正常")
@@ -226,18 +314,28 @@ public class UploadFile : MonoBehaviour
                 if (emptyDPos.Count > 0)
                 {
                     GameObject fillpos = (GameObject)emptyDPos[Random.Range(0, emptyDPos.Count)];
+                   
                     GameObject instance = Instantiate(normal_small, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    Debug.Log(instance.transform.parent.name);
+                    emptyDPos.Remove((object)fillpos);
                 }
                 else
                 {
                     GameObject fillpos = (GameObject)emptyPos[Random.Range(0, emptyPos.Count)];
+                    
                     GameObject instance = Instantiate(normal_small, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    Debug.Log(instance.transform.parent.name);
+                    emptyPos.Remove((object)fillpos);
                 }
             }
             else if (template[tempNum][i] == "大正常")
@@ -245,18 +343,28 @@ public class UploadFile : MonoBehaviour
                 if (emptyDPos.Count > 0)
                 {
                     GameObject fillpos = (GameObject)emptyDPos[Random.Range(0, emptyDPos.Count)];
+                    
                     GameObject instance = Instantiate(normal_big, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    Debug.Log(instance.transform.parent.name);
+                    emptyDPos.Remove((object)fillpos);
                 }
                 else
                 {
                     GameObject fillpos = (GameObject)emptyPos[Random.Range(0, emptyPos.Count)];
+                    ;
                     GameObject instance = Instantiate(normal_big, fillpos.transform.position, Quaternion.identity);
-                    Vector3 originalScale = instance.transform.localScale;
-                    instance.transform.SetParent(fillpos.transform, true);
-                    instance.transform.localScale = originalScale;
+                    instance.transform.position = new Vector3(0, 0, 0);
+                    if (fillpos != null)
+                    {
+                        instance.transform.SetParent(fillpos.transform, false);
+                    }
+                    Debug.Log(instance.transform.parent.name);
+                    emptyPos.Remove((object)fillpos);
                 }
             }
         }
@@ -264,8 +372,5 @@ public class UploadFile : MonoBehaviour
 
     }
 
-    void FileFill()
-    {
-        
-    }
+   
 }

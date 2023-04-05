@@ -231,12 +231,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab:
-  - {fileID: 3618597557704241672, guid: 2f09dad9e48b3ab49be592b772e60909, type: 3}
   - {fileID: 6058254878523319589, guid: a236b9aeec16630479a79252b1bb9bc1, type: 3}
-  - {fileID: 568127704244969907, guid: 7d63c321bff03e6478818605c1eb479d, type: 3}
   numsOfBullets: 2
-  frequency: 3
-  speed: {x: 5, y: 10}
+  frequency: 5
+  speed: {x: 0.2, y: 1}
 --- !u!114 &2758641196509391041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,5 +247,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b07294429f2f134e9045b032fdc9c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longPressTime: 3
+  longPressTime: 1
   animator: {fileID: 8945688679579904626}
