@@ -21,23 +21,23 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 46483072e5f694d73b789fe2ea8b6f1d, type: 3}
-    - time: 0.016666668
+    - time: 0.041666668
       value: {fileID: 21300000, guid: 83e98b777ce2b49358030babc74b0f62, type: 3}
-    - time: 0.033333335
-      value: {fileID: 21300000, guid: faee280378d71479a81cf086abc5a0fa, type: 3}
-    - time: 0.05
-      value: {fileID: 21300000, guid: 997ce696f9ee5496faa362c26c77dd0b, type: 3}
-    - time: 0.06666667
-      value: {fileID: 21300000, guid: b0ea46a0d00c64835a70fa3fcb2ee1ad, type: 3}
     - time: 0.083333336
+      value: {fileID: 21300000, guid: faee280378d71479a81cf086abc5a0fa, type: 3}
+    - time: 0.125
+      value: {fileID: 21300000, guid: 997ce696f9ee5496faa362c26c77dd0b, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: b0ea46a0d00c64835a70fa3fcb2ee1ad, type: 3}
+    - time: 0.20833333
       value: {fileID: 21300000, guid: 6cf6f9a788d2b4dcba983e7d92e25579, type: 3}
-    - time: 0.1
+    - time: 0.25
       value: {fileID: 21300000, guid: dd05add7cc0874953b7f7a5583996adb, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 60
+  m_SampleRate: 24
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -64,7 +64,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.11666667
+    m_StopTime: 0.29166666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -84,7 +84,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.1
+  - time: 0.25
     functionName: DestoryFile
     data: 
     objectReferenceParameter: {fileID: 0}
