@@ -33,7 +33,7 @@ public class FireWall : Item
             i.GetComponent<BulletController>().SetInvincible();
         }
         GameObject cursor = GameObject.Find("ЪѓБъ");
-        cursor.GetComponent<CustomCursor>().Change();
+        cursor.GetComponent<CustomCursor>().Change(1,1.9f);
         
     }
     public void MyDestroy()

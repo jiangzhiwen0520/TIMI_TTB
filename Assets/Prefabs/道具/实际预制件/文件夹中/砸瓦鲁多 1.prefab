@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefrb: {fileID: 6255436311713259982, guid: d5e972d565b4973498708fbe414ff607, type: 3}
+  dialog: {fileID: 4597701036653911885, guid: 5e50aa99a305ffa48a4b7c6f679646d9, type: 3}
 --- !u!61 &865243211889146825
 BoxCollider2D:
   m_ObjectHideFlags: 0

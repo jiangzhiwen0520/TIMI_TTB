@@ -101,7 +101,7 @@ public class SpaceCaculate : MonoBehaviour
         }
 
         
-        Debug.Log(pos.Count);
+        //Debug.Log(pos.Count);
         for (int i = 0; i < pos.Count; i++)
         {
             if (pos[i].transform.childCount > 0)

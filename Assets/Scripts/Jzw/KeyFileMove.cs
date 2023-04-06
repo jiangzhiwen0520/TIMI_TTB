@@ -41,6 +41,12 @@ public class KeyFileMove : MonoBehaviour
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 gameObject.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.5f);
                 GameObject.Find("“Ù∆µœµÕ≥").GetComponent<changeBgm>().SetClip();
+
+                GameObject[] objects = GameObject.FindGameObjectsWithTag("RVFiles");
+                foreach (GameObject i in objects)
+                {
+                    i.GetComponent<VirusProduction>().SetFrequency(true);
+                }
             }
         }
 
@@ -67,6 +73,12 @@ public class KeyFileMove : MonoBehaviour
         gameObject.GetComponent<FileChoose>().enabled = true;
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1f);
+        
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("RVFiles");
+        foreach (GameObject i in objects)
+        {
+            i.GetComponent<VirusProduction>().SetFrequency(false);
+        }
         //Debug.Log(transform.position);
         //transform.position = new Vector3(0, 0, 0);
         //Debug.Log(transform.position);

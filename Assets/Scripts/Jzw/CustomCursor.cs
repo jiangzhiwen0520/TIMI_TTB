@@ -16,10 +16,11 @@ public class CustomCursor : MonoBehaviour
         Cursor.SetCursor(cursorTexture[0], hotSpot, CursorMode.Auto);
         
     }
-    public void Change()
+    public void Change(int i,float t)
     {
         m_change = true;
-        Cursor.SetCursor(cursorTexture[1], hotSpot, CursorMode.Auto);
+        Cursor.SetCursor(cursorTexture[i], hotSpot, CursorMode.Auto);
+        m_time = t;
     }
 
     private void Update()

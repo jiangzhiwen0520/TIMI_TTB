@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mask: {fileID: 8359530060940590892}
-  stopTime: 5
+  stopTime: 2
 --- !u!1 &8359530060813260843
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Error!...Error!!\u4F60\u60CA\u52A8\u4E86\u75C5\u6BD2\uFF0C\u7CFB\u7EDF\u762B\u75EA\uFF0C5s\u540E\u91CD\u542F\uFF01"
+  m_text: "Error!...Error!!\u4F60\u60CA\u52A8\u4E86\u75C5\u6BD2\uFF0C\u7CFB\u7EDF\u762B\u75EA\uFF0C2s\u540E\u91CD\u542F\uFF01"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6819d16a34c32ed43b795a0ae0a497dc, type: 2}
   m_sharedMaterial: {fileID: -5062378753302400940, guid: 6819d16a34c32ed43b795a0ae0a497dc, type: 2}

@@ -21,7 +21,8 @@ public class DialogController : MonoBehaviour
         for (int i = 0; i < ms.Length; i++)
         {
             transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = ms[i];
-            transform.GetChild(2).GetComponent<Image>().sprite = imgs[i];
+            if(imgs.Length>0)
+                transform.GetChild(2).GetComponent<Image>().sprite = imgs[i];
             if(times.Length>0)
                 yield return new WaitForSecondsRealtime(times[i]);
             else
@@ -64,4 +65,5 @@ public class DialogController : MonoBehaviour
         }
         Time.timeScale = 0;
     }
-}
+
+ }

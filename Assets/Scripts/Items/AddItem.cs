@@ -7,6 +7,7 @@ public class AddItem : MonoBehaviour
 {
     //public GameObject container;
     public GameObject itemPrefrb;
+    public GameObject dialog;
     private ItemController m_ic;
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,9 @@ public class AddItem : MonoBehaviour
             k.SetActive(false);
             if (!m_ic.GetContainCounter().SetItems(k))
             {
+                GameObject i = Instantiate(dialog);
+                string[] s = new string[1] { "道具满了，别当仓鼠了，先用再说！" };
+                i.transform.GetChild(0).GetComponent<DialogController>().SetMs(s, null, null);
 
                 Destroy(k);
             }

@@ -22,7 +22,7 @@ public class NextPanel : MonoBehaviour
             nextLevelScene = s + (Convert.ToInt32(l)+1);
             if (nextLevelScene.Equals("Scene_05"))
             {
-                return;
+                nextLevelScene= "Scene_04";
             }
             SceneManager.LoadScene(nextLevelScene);
         });

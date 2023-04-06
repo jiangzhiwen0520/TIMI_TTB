@@ -1432,6 +1432,7 @@ GameObject:
   - component: {fileID: 151940954}
   - component: {fileID: 151940953}
   - component: {fileID: 151940952}
+  - component: {fileID: 151940955}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1505,6 +1506,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &151940955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151940951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec184dc5e5665aa4bb960aafa3de4611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &152253388
 GameObject:
   m_ObjectHideFlags: 0
@@ -9145,6 +9158,7 @@ MonoBehaviour:
   cursorTexture:
   - {fileID: 2800000, guid: f35e769e4090d5e459d24fefbc345cad, type: 3}
   - {fileID: 2800000, guid: 30ff45a58fe46bc469a121780b7e4d59, type: 3}
+  - {fileID: 2800000, guid: 30ff45a58fe46bc469a121780b7e4d59, type: 3}
   hotSpot: {x: 0, y: 0}
 --- !u!4 &1528812829
 Transform:
@@ -12557,6 +12571,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8980040889466350165, guid: b61bcbbf77d456940beaa90792c94d49, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c67e323a667053d49b3175f9a44b29eb, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b61bcbbf77d456940beaa90792c94d49, type: 3}
 --- !u!1001 &3949710840025562527

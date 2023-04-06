@@ -89,7 +89,7 @@ public class BulletController : MonoBehaviour
             if (item != null)
             {
                 item.GetComponent<FireWall>().Func();
-                Debug.Log("无敌时间");
+                //Debug.Log("无敌时间");
                 //Destroy(item, 0.1f);
                 //g.GetComponent<ItemController>().ShowItems();
             }
@@ -97,6 +97,10 @@ public class BulletController : MonoBehaviour
             {
                     //Debug.Log("触发弹窗");
                 GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(5);
+
+                GameObject cursor = GameObject.Find("鼠标");
+                cursor.GetComponent<CustomCursor>().Change(2, 0.3f);
+
                 GameObject kf = GameObject.Find("重要文件");
                 if(kf!=null) kf.GetComponent<KeyFileMove>().Reset();
                 Instantiate(dialog);

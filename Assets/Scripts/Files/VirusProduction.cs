@@ -14,8 +14,15 @@ public class VirusProduction : MonoBehaviour
     private bool m_canShoot = true;
     private float m_times = 0;
     private bool m_canShoot2 = true;
+    private bool larger = false;
+    //public static bool larger = false;
     void Start()
     {
+        if (Globle.larger)
+        {
+            larger = true;
+            frequency /= 2;
+        }
         //m_times = frequency;
     }
 
@@ -41,6 +48,10 @@ public class VirusProduction : MonoBehaviour
                         Transform bulletSpawnPoint = transform;
                         bulletSpawnPoint.Rotate(0, 0, randomAngle);
                         GameObject bullet = Instantiate(bulletPrefab[Random.Range(0,bulletPrefab.Length)], bulletSpawnPoint.position, bulletSpawnPoint.rotation,transform);
+                        if (larger)
+                        {
+                            bullet.transform.localScale *= 2;
+                        }
                         Vector3 origin = bullet.transform.localScale;
                         bullet.transform.SetParent(transform.parent.parent, true);
                         bullet.transform.localScale = origin;
@@ -67,5 +78,19 @@ public class VirusProduction : MonoBehaviour
     public void SetCanShoot2(bool b)
     {
         m_canShoot2 = b;
+    }
+    public void SetFrequency(bool add)
+    {
+        if (add)
+        {
+            larger = true;
+            frequency /= 2;
+            Globle.larger = true;
+        }
+        else {
+            frequency *= 2;
+            larger = false;
+            Globle.larger = false;
+        }
     }
 }
