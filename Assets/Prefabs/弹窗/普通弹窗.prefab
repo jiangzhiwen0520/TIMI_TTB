@@ -111,8 +111,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 110, y: 46}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 110, y: -14.7322}
+  m_SizeDelta: {x: 200, y: 98.6594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4597701035893621471
 CanvasRenderer:
@@ -144,25 +144,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u666E\u901A\u6587\u4EF6"
   m_isRightToLeft: 0
-<<<<<<< Updated upstream
-  m_fontAsset: {fileID: 11400000, guid: 162844958d84b494aba40f1460067f3e, type: 2}
-  m_sharedMaterial: {fileID: -2327285367808786019, guid: 162844958d84b494aba40f1460067f3e, type: 2}
-=======
-<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 0a032c088bb55d0408ea66010155ab71, type: 2}
   m_sharedMaterial: {fileID: 4062841402724963480, guid: 0a032c088bb55d0408ea66010155ab71, type: 2}
-=======
-  m_fontAsset: {fileID: 11400000, guid: 162844958d84b494aba40f1460067f3e, type: 2}
-  m_sharedMaterial: {fileID: -2327285367808786019, guid: 162844958d84b494aba40f1460067f3e, type: 2}
->>>>>>> de46c61aebb13bcbc3bba04a2e553f0883205ed7
->>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280466122
-  m_fontColor: {r: 0.7924528, g: 0.72984964, b: 0.13207538, a: 1}
+    rgba: 4278650631
+  m_fontColor: {r: 0.028301895, g: 0.028301895, b: 0.028301895, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -215,7 +205,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -46.874115}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

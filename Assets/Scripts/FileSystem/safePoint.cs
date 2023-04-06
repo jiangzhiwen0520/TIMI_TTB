@@ -29,8 +29,9 @@ public class safePoint : MonoBehaviour
         {
             string filePath = Application.dataPath + "/task.csv";
             WriteCsv(filePath);//–¥»Î±æµÿ
+            //Debug.Log("11");
             next.SetActive(true);
-            Time.timeScale = 0;
+            Time.timeScale = 1;
         }
     }
     public void WriteCsv( string path)

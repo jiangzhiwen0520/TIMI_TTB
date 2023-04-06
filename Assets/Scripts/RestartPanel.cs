@@ -12,27 +12,38 @@ public class RestartPanel : MonoBehaviour
     public string restartScene;
     private void Awake()
     {
-        btn_Restart.onClick.AddListener(() =>
+        if (btn_Restart != null)
         {
-            restartScene= SceneManager.GetActiveScene().name;
-            Time.timeScale = 1;
-            SceneManager.LoadScene(restartScene);
-        });
-        btn_quit.onClick.AddListener(() =>
-        {
-            SceneManager.LoadScene("UI");
-            Time.timeScale = 1;
-        });
-        btn_Back.onClick.AddListener(() =>
-        {
-            SceneManager.LoadScene("UI");
-            Time.timeScale = 1;
-            gameObject.transform.DOScale(Vector3.zero, 0.3f).OnComplete(() =>
+            btn_Restart.onClick.AddListener(() =>
             {
-                gameObject.SetActive(false);
-                gameObject.transform.DOScale(Vector3.one, 0.1f);
+                restartScene = SceneManager.GetActiveScene().name;
+                Time.timeScale = 1;
+                SceneManager.LoadScene(restartScene);
             });
-        });
+        }
+        if (btn_quit != null)
+        {
+            btn_quit.onClick.AddListener(() =>
+            {
+                SceneManager.LoadScene("UI");
+                Time.timeScale = 1;
+            });
+        }
+        if (btn_Back != null)
+        {
+            btn_Back.onClick.AddListener(() =>
+            {
+                SceneManager.LoadScene("UI");
+                Time.timeScale = 1;
+                gameObject.transform.DOScale(Vector3.zero, 0.3f).OnComplete(() =>
+                {
+                    gameObject.SetActive(false);
+                    gameObject.transform.DOScale(Vector3.one, 0.1f);
+                });
+            });
+        }
+      
+        
 
     }
 }

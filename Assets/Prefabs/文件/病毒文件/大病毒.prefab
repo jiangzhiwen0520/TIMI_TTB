@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8056158559711799173}
   - component: {fileID: 8056158559711799172}
   - component: {fileID: 34694462816060738}
+  - component: {fileID: 3534454303429516007}
   m_Layer: 0
   m_Name: "\u5927\u75C5\u6BD2"
   m_TagString: RVFiles
@@ -275,3 +276,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   longPressTime: 2.5
   animator: {fileID: 8056158559711799176}
+--- !u!114 &3534454303429516007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8056158559711799175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e7801dae6810a449ee328b10685e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverScaleFactor: 1.2
+  isMouseOver: 0

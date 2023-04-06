@@ -95,6 +95,7 @@
     <Compile Include="Assets\Scripts\Jzw\ShowInfo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Items\TheWorld.cs" />
+    <Compile Include="Assets\WatchGuiding.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="Assets\Scripts\Tests\TestShoot.cs" />
     <Compile Include="Assets\Test.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\Scripts\Jzw\Victory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

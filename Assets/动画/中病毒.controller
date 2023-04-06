@@ -60,7 +60,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: "\u4E2D\u75C5\u6BD2\u9500\u6BC1"
-  m_Speed: 0.2
+  m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
