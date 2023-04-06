@@ -50,7 +50,29 @@ public class FileChoose : MonoBehaviour
         }
         isMouseOver = true;
 
-         GameObject.Find("鼠标").GetComponent<ShowInfo>().ShowObjectInfo(gameObject.name);
+        string infoText = gameObject.name;
+        if (gameObject.tag != "Folder")
+        {    
+            infoText = infoText.Replace("普通垃圾（小）", "小垃圾：\n左键删除时间：1s\n占据空间：1");
+            infoText = infoText.Replace("中垃圾", "中垃圾：\n左键删除时间：1.5s\n占据空间：2");
+
+
+
+            GameObject.Find("鼠标").GetComponent<ShowInfo>().ShowObjectInfo(infoText);
+
+        }
+        
+
+
+
+
+
+
+        else
+        {
+            GameObject.Find("鼠标").GetComponent<ShowInfo>().ShowObjectInfo(gameObject.name);
+        }
+        
     }
 
     private void OnMouseExit()
