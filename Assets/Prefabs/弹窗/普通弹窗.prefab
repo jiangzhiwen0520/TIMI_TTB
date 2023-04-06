@@ -144,8 +144,18 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u666E\u901A\u6587\u4EF6"
   m_isRightToLeft: 0
+<<<<<<< Updated upstream
   m_fontAsset: {fileID: 11400000, guid: 162844958d84b494aba40f1460067f3e, type: 2}
   m_sharedMaterial: {fileID: -2327285367808786019, guid: 162844958d84b494aba40f1460067f3e, type: 2}
+=======
+<<<<<<< HEAD
+  m_fontAsset: {fileID: 11400000, guid: 0a032c088bb55d0408ea66010155ab71, type: 2}
+  m_sharedMaterial: {fileID: 4062841402724963480, guid: 0a032c088bb55d0408ea66010155ab71, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 162844958d84b494aba40f1460067f3e, type: 2}
+  m_sharedMaterial: {fileID: -2327285367808786019, guid: 162844958d84b494aba40f1460067f3e, type: 2}
+>>>>>>> de46c61aebb13bcbc3bba04a2e553f0883205ed7
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
