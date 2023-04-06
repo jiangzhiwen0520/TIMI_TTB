@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2934499683512016321}
   - component: {fileID: 2934499683512016326}
   - component: {fileID: 2934499683512016327}
+  - component: {fileID: -4293476799670110999}
+  - component: {fileID: -2053627519541391221}
   m_Layer: 0
   m_Name: "\u7C89\u788E\u673A"
   m_TagString: Untagged
@@ -119,3 +121,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 345da493bea225d43960291074c052b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4293476799670110999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2934499683512016324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e7801dae6810a449ee328b10685e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverScaleFactor: 1.2
+  isMouseOver: 0
+--- !u!61 &-2053627519541391221
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2934499683512016324}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.26, y: 1.14}
+    newSize: {x: 1.26, y: 1.14}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.26, y: 1.14}
+  m_EdgeRadius: 0

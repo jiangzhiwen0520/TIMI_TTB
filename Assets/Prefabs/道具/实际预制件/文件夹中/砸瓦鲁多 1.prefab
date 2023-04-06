@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 425713724564508612}
   - component: {fileID: 759383770932851264}
   - component: {fileID: 865243211889146825}
+  - component: {fileID: 6175339857692806178}
   m_Layer: 0
   m_Name: "\u7838\u74E6\u9C81\u591A 1"
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: cbfdceacf0b7fa245b1b0b8be98691b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ce9c6de93422c0458add9503fafa629, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,7 +118,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.26, y: 1.26}
+    oldSize: {x: 1.08, y: 1.14}
     newSize: {x: 1.26, y: 1.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -126,3 +127,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.26, y: 1.26}
   m_EdgeRadius: 0
+--- !u!114 &6175339857692806178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313492784795459382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e7801dae6810a449ee328b10685e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverScaleFactor: 1.2
+  isMouseOver: 0

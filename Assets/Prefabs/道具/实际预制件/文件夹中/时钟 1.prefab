@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8338686030774417024}
   - component: {fileID: 8555351676016768655}
   - component: {fileID: 3252710541438105476}
+  - component: {fileID: 3879130679228351450}
   m_Layer: 0
   m_Name: "\u65F6\u949F 1"
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 26fcf04a9d77a4744b7369cbc8b5fc23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 710717ef912c42f4b9258e2d9f77671f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,3 +127,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.14, y: 1.14}
   m_EdgeRadius: 0
+--- !u!114 &3879130679228351450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190100170212975142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e7801dae6810a449ee328b10685e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverScaleFactor: 1.2
+  isMouseOver: 0
