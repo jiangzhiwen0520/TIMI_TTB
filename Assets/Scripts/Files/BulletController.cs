@@ -95,7 +95,8 @@ public class BulletController : MonoBehaviour
             }
             else
             {
-                    //Debug.Log("触发弹窗");
+                //Debug.Log("触发弹窗");
+                GameObject.Find("Main Camera").GetComponent<CameraShake>().Shake();
                 GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(5);
 
                 GameObject cursor = GameObject.Find("鼠标");

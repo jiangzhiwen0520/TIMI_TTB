@@ -141,6 +141,7 @@
     <Compile Include="Assets\Scripts\AddSpace.cs" />
     <Compile Include="Assets\Scripts\Items\UpContorller.cs" />
     <Compile Include="Assets\Scripts\KeyFolderTrigger.cs" />
+    <Compile Include="Assets\Scripts\Jzw\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Items\FireWall.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
