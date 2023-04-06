@@ -49,7 +49,9 @@ public class StopDialogController : MonoBehaviour
         GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(0);
         GameObject g = GameObject.FindWithTag("PauseDialog");
         //Debug.Log("MouseClick");
-        Time.timeScale = 1;
+        if (GameObject.FindGameObjectWithTag("ShockDialog") == null) { 
+            Time.timeScale = 1;
+        }
         Destroy(g);
 
     }
@@ -57,14 +59,15 @@ public class StopDialogController : MonoBehaviour
     {
         string filePath = Application.dataPath + "/task.csv";
         WriteCsv(filePath);//写入本地
-
+        SceneManager.LoadScene("UI");
+        Time.timeScale = 1;
         //GameObject.Find("效果音效").GetComponent<AudioContonller>().SetAudio(0);
-#if UNITY_EDITOR
+/*#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;//如果是在unity编译器中
     #else
             Application.Quit();//否则在打包文件中
     #endif
-
+        */
     }
     public void WriteCsv(string path)
     {

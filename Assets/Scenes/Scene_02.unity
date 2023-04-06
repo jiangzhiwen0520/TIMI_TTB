@@ -2033,6 +2033,7 @@ GameObject:
   - component: {fileID: 151940953}
   - component: {fileID: 151940952}
   - component: {fileID: 151940955}
+  - component: {fileID: 151940956}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2118,6 +2119,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec184dc5e5665aa4bb960aafa3de4611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &151940956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151940951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1bee918b1d7514eb14ae54a5576cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 0.5
+  shakeIntensity: 0.1
 --- !u!1 &152253388
 GameObject:
   m_ObjectHideFlags: 0
@@ -11276,6 +11291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorTexture:
   - {fileID: 2800000, guid: f35e769e4090d5e459d24fefbc345cad, type: 3}
+  - {fileID: 2800000, guid: 30ff45a58fe46bc469a121780b7e4d59, type: 3}
   - {fileID: 2800000, guid: 30ff45a58fe46bc469a121780b7e4d59, type: 3}
   hotSpot: {x: 0, y: 0}
 --- !u!4 &1528812829

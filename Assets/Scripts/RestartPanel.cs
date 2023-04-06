@@ -20,11 +20,13 @@ public class RestartPanel : MonoBehaviour
         });
         btn_quit.onClick.AddListener(() =>
         {
-            Application.Quit();
+            SceneManager.LoadScene("UI");
+            Time.timeScale = 1;
         });
         btn_Back.onClick.AddListener(() =>
         {
-            Application.Quit();
+            SceneManager.LoadScene("UI");
+            Time.timeScale = 1;
             gameObject.transform.DOScale(Vector3.zero, 0.3f).OnComplete(() =>
             {
                 gameObject.SetActive(false);

@@ -10,7 +10,7 @@ public class TestOfItems : MonoBehaviour
     public GameObject particle;
     private ItemController m_itemController;
     private ParticleSystem m_ps;
-    private bool sig=true;
+    //private bool sig=true;
     void Start()
     {
         m_itemController = container.GetComponent<ItemController>();

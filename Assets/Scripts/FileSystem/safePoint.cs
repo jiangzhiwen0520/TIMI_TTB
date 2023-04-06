@@ -22,6 +22,9 @@ public class safePoint : MonoBehaviour
     }
     void OnMouseDown()
     {
+        //Debug.Log(GameObject.FindGameObjectWithTag("KeyFolder").name);
+        if (GameObject.Find("重要文件") == null) return;
+        //Debug.Log(GameObject.Find("重要文件").GetComponent<KeyFileMove>()!=null);
         if (GameObject.Find("重要文件").GetComponent<KeyFileMove>().isMoving)
         {
             string filePath = Application.dataPath + "/task.csv";

@@ -42,10 +42,13 @@ public class DialogController : MonoBehaviour
     public void MouseClick()
     {
         GameObject.Find("–ßπ˚“Ù–ß").GetComponent<AudioContonller>().SetAudio(0);
-        GameObject g = GameObject.FindWithTag("ShockDialog");
+        Transform g = transform.parent.parent;
         //Debug.Log("MouseClick");
-        Time.timeScale = 1;
-        Destroy(g);
+        if (g.CompareTag("ShockDialog"))
+        {
+            Time.timeScale = 1;
+        }
+        Destroy(g.gameObject);
         //gameObject.transform.parent.parent.gameObject.SetActive(false);
     }
     public void SetMs(string[] s, Sprite[] i,float[] t)
