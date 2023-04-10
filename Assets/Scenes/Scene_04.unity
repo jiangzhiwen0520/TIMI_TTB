@@ -4613,7 +4613,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6249288330171039113, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
       propertyPath: m_Name
-      value: "\u6587\u4EF6\u5939\uFF08\u4E0A\u9501\uFF09"
+      value: "\u4E0A\u9501\u6587\u4EF6\u5939"
       objectReference: {fileID: 0}
     - target: {fileID: 6249288330171039156, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
       propertyPath: m_RootOrder
@@ -4662,6 +4662,10 @@ PrefabInstance:
     - target: {fileID: 6249288330171039158, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
       propertyPath: names.Array.data[0]
       value: "\u6587\u4EF6\u59393.2"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249288330171039158, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
+      propertyPath: names.Array.data[1]
+      value: "\u4E0A\u9501\u6587\u4EF6\u5939"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
@@ -5897,7 +5901,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6249288330171039113, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
       propertyPath: m_Name
-      value: "\u6587\u4EF6\u5939\uFF08\u4E0A\u9501\uFF09"
+      value: "\u4E0A\u9501\u6587\u4EF6\u5939"
       objectReference: {fileID: 0}
     - target: {fileID: 6249288330171039156, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
       propertyPath: m_RootOrder
@@ -5946,6 +5950,10 @@ PrefabInstance:
     - target: {fileID: 6249288330171039158, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
       propertyPath: names.Array.data[0]
       value: "\u6587\u4EF6\u59395.2"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249288330171039158, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
+      propertyPath: names.Array.data[1]
+      value: "\u4E0A\u9501\u6587\u4EF6\u5939"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
@@ -8407,7 +8415,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6249288330171039113, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
       propertyPath: m_Name
-      value: "\u6587\u4EF6\u5939\uFF08\u4E0A\u9501\uFF09"
+      value: "\u4E0A\u9501\u6587\u4EF6\u5939"
       objectReference: {fileID: 0}
     - target: {fileID: 6249288330171039113, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
       propertyPath: m_IsActive
@@ -8460,6 +8468,10 @@ PrefabInstance:
     - target: {fileID: 6249288330171039158, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
       propertyPath: names.Array.data[0]
       value: "\u6587\u4EF6\u59394.1"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249288330171039158, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
+      propertyPath: names.Array.data[1]
+      value: "\u4E0A\u9501\u6587\u4EF6\u5939"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b16d5eb4a9fbd4899e5b72700ea6c1, type: 3}
@@ -10939,7 +10951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1172814806
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14033,7 +14045,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 374dc9103002c9a44890b7a2a10ee201, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.15686275}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
