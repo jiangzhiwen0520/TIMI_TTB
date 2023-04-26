@@ -1,5 +1,5 @@
 # TIMI_TTB
-##天美×三教杯游戏创意设计大赛 数码奇迹 -《云端防御》
+## 天美×三教杯游戏创意设计大赛 数码奇迹 -《云端防御》
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/34395816/230918829-ff991c77-b8e2-43c0-a837-3a93bd8e7ded.png">
